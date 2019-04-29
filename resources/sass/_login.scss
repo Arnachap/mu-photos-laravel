@@ -1,0 +1,28 @@
+#login {
+    min-height: calc(100vh - 115px);
+
+    .contact-form {
+        display: block;
+        margin-top: 40px;
+    
+        input,
+        textarea {
+            width: 100%;
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid $primary;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            @include heading-font;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700');
+@import '~bootstrap/scss/bootstrap';
+@import 'variables';
+@import 'mixins';
+@import 'navbar';
+@import 'footer';
+@import 'home';
+@import 'gallery';
+@import 'album';
+@import 'about';
+@import 'prestations';
+@import 'contact';
+@import 'login';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    line-height: 1.4;
+}
+
+::selection {
+    background-color: $primary;
+    color: white;
+}
+
+a {
+    color: white;
+    @include easeOut;
+
+    &:hover {
+        color: $primary;
+        text-decoration: none;
+    }
+}
+
+section {
+    padding: 40px;
+}
+
+// Classes
+.section-title {
+    text-align: center;
+    font-size: 50px;
+    color: $primary;
+    margin: 30px 0;
+    @include script-font;
+}
+
+.section-subtitle {
+    padding: 0 60px;
+    text-align: center;
+    font-size: 16px;
+    color: $grey;
+    line-height: 1.2rem;
+    @include body-font;
+}
+
+.button {
+    display: block;
+    margin: auto;
+    font-size: 20px;
+    background-color: $primary;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    @include heading-font;
+    @include easeOut;
+
+    &:hover {
+        background-color: $primary-dark;
+    }
+}

@@ -1,0 +1,30 @@
+.prestation {
+    text-align: center;
+
+    img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+    }
+
+    h3 {
+        margin: 20px 0;
+        color: $primary;
+        @include script-font;
+    }
+
+    p {
+        @include body-font;
+
+        a {
+            color: $primary;
+        }
+
+        &.price {
+            font-size: 20px;
+            color: $primary;
+            @include serif-font;
+        }
+    }
+}

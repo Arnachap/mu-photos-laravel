@@ -1,0 +1,58 @@
+#contact {
+    .contact-form {
+        display: block;
+        margin-top: 40px;
+    
+        input,
+        textarea {
+            width: 100%;
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid $primary;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            @include heading-font;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+    }
+
+    .section-subtitle {
+        margin-top: 30px;
+        text-align: justify;
+        text-indent: 2rem;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .contact-info {
+        display: block;
+        margin-top: 30px;
+        padding: 0 60px;
+
+        i {
+            float: left;
+            font-size: 20px;
+            width: 32px;
+            margin-right: 20px;
+            color: $primary;
+            text-align: center;
+        }
+
+        p {
+            @include body-font;
+
+            span {
+                font-weight: bold;
+                color: $primary;
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+#mainNav {
+    background-color: transparent;
+    @include easeOut;
+
+    .navbar-brand {
+        img {
+            @include easeOut;
+        }
+
+        #logo-img {
+            height: 50px;
+        }
+
+        #logo-name {
+            height: 36px;
+            margin-left: 10px;
+        }
+    }
+    .navbar-nav {
+        .nav-item {
+            &:hover > .dropdown-menu {
+                display: block;
+            }
+            
+            &.dropdown .nav-link {
+                cursor: default;
+            }
+
+            .nav-link {
+                padding: 0.75em 0;
+                letter-spacing: 1px;
+                color: white;
+                @include heading-font;
+                @include easeOut;
+
+                &.active,
+                &:hover {
+                    color: $primary;
+                }
+            }
+            
+            .dropdown-menu {
+                left: 50% ;
+                transform: translateX(-50%);
+                top: 90%;
+                border-radius: 3px;
+                background: white;
+                border: none;
+
+                .dropdown-item {
+                    text-align: center;
+                    color: $grey;
+                    @include heading-font;
+                    @include easeOut;
+
+                    &:hover {
+                        background: white;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:992px) {
+    #mainNav {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border: none;
+        background-color: transparent;
+
+        .navbar-brand {
+            font-size: 1.75em;
+        }
+
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    padding: 1.1em 1em !important;
+                }
+            }
+        }
+
+        &.navbar-shrink {
+            padding-top: 0;
+            padding-bottom: 0;
+            background-color: rgba(white, 0.95);
+            box-shadow: 0 1px 5px rgba(black, 0.2);
+
+            .navbar-brand {
+                #logo-img {
+                    height: 40px;
+                }
+        
+                #logo-name {
+                    height: 28px;
+                }
+            }
+
+            .nav-link {
+                color: $grey !important;
+
+                &:hover {
+                    color: $primary !important;
+                }
+            }
+        }
+    }
+}
