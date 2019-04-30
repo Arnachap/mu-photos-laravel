@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class ClientController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,6 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('clients.home');
+        if(auth()->user()->isAdmin) {
+            return redirect('/admin');
+        }
+
+        return view('clients.index');
     }
 }

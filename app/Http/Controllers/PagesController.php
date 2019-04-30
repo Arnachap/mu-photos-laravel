@@ -23,6 +23,14 @@ class PagesController extends Controller
     }
     
     public function login() {
+        if (auth()->user()) {
+            return redirect('/client');
+        }
+
         return view('auth.login');
+    }
+
+    public function register() {
+        return view('auth.register');
     }
 }

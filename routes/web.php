@@ -12,15 +12,20 @@
 */
 
 // Main pages
-Route::get('/', 'PagesController@index');
-Route::get('a-propos', 'PagesController@about');
-Route::get('contact', 'PagesController@contact');
-Route::get('prestations', 'PagesController@prestations');
-Route::get('connexion', 'PagesController@login');
+Route::get('/', 'PagesController@index')->name('index');
+Route::get('a-propos', 'PagesController@about')->name('about');
+Route::get('contact', 'PagesController@contact')->name('contact');
+Route::get('prestations', 'PagesController@prestations')->name('prestations');
+Route::get('connexion', 'PagesController@login')->name('connexion');
+Route::get('register', 'PagesController@register');
 Route::resource('albums', 'AlbumsController')->except('index');
 
 // Album category pages
-Route::get('galerie/{category}', 'AlbumsController@category');
+Route::get('galerie/{category}', 'AlbumsController@category')->name('galerie');
 
+// Clients routes
 Auth::routes();
-Route::get('client', 'ClientController@index');
+Route::get('client', 'ClientController@index')->middleware('auth')->name('client');
+
+// Admin routes
+Route::get('mu', 'AdminController@index')->middleware('admin')->name('admin');
