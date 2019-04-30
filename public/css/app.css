@@ -11364,6 +11364,34 @@ header .carousel-indicators li {
   resize: vertical;
 }
 
+#admin .sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 20px 0 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+#admin .sidebar .sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#admin .sidebar .sidebar-sticky .nav-link {
+  color: #333;
+}
+
+#admin .sidebar .sidebar-sticky .nav-link.active,
+#admin .sidebar .sidebar-sticky .nav-link:hover {
+  color: #33B5E5;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

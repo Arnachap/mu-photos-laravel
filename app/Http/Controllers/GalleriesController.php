@@ -6,8 +6,18 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Album;
 
-class AlbumsController extends Controller
+class GalleriesController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('admin', ['except' => 'show']);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -75,18 +85,4 @@ class AlbumsController extends Controller
         //
     }
 
-    public function category($categoryName) {
-        // Get category details
-        $categories = Category::where('name', $categoryName)->get();
-
-        // Use foreach as a simple object to array converter
-        foreach ($categories as $category) {
-            // Get albums from this category
-            $albums = Album::where('category', $category->name)->get();
-
-            return view('albums.gallery')
-                ->with('albums', $albums)
-                ->with('category', $category);
-        }
-    }
 }
