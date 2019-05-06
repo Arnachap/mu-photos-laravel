@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col-8 mx-auto">
-                {{ Form::open(['action' => 'AlbumsController@store', 'method' => 'POST']) }}
+                {{ Form::open(['action' => 'AlbumsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) }}
                     <div class="form-group">
                         {{ Form::label('title', 'Titre :') }}
                         {{ Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Titre de l\'album', 'autofocus']) }}
@@ -30,6 +30,18 @@
                             'portrait' => 'Portrait',
                             'sport' => 'Sport'
                         ], null, ['class' => 'form-control', 'placeholder' => 'Choisir une catégorie...']) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('thumbnail', 'Image de l\'album :') }}
+                        
+                        <br>
+
+                        {{ Form::file('thumbnail') }}
+
+                        <br>
+
+                        <small class="text-muted">Attention : maximum 2Mo</small>
                     </div>
 
                     {{ Form::submit('Créer l\'album', ['class' => 'button']) }}

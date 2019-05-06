@@ -14,7 +14,7 @@
                 @foreach($albums as $album)
                     <div class="col-4">
                         <div class="album-link">
-                            <img class="img-fluid" src="/img/gallery/baptiste-morgane.jpg" alt="">
+                            <img class="img-fluid" src="/storage/thumbnails/{{ $album->thumbnail }}" alt="">
 
                             <a href="/albums/{{ $album->id }}"></a>
 
