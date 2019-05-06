@@ -27,7 +27,7 @@
                             'les-premiers-jours' => 'Les premiers jours',
                             'le-bonheur-en-famille' => 'Le bonheur en famille',
                             'boudoir' => 'Boudoir',
-                            'portrait' => 'Portrait',
+                            'portraits' => 'Portraits',
                             'sport' => 'Sport'
                         ], $album->category, ['class' => 'form-control', 'placeholder' => 'Choisir une catégorie...']) }}
                     </div>

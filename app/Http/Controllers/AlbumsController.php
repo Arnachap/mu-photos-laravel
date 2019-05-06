@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Album;
 use App\Category;
+use App\Photo;
 
 class AlbumsController extends Controller
 {
@@ -95,8 +96,11 @@ class AlbumsController extends Controller
     public function show($id)
     {
         $album = Album::find($id);
+        $photos = Photo::where('albumId', $album->id)->get();
 
-        return view('pages.album')->with('album', $album);
+        return view('pages.album')
+            ->with('album', $album)
+            ->with('photos', $photos);
     }
 
     /**
@@ -165,6 +169,14 @@ class AlbumsController extends Controller
     public function destroy($id)
     {
         $album = Album::find($id);
+        $photos = Photo::where('albumId', $album->id)->get();
+
+
+        // Delete Photos from DB & storage
+        foreach ($photos as $photo) {
+            Storage::delete('public/photos/' . $album->id . '/' . $photo->photo);
+            $photo->delete();
+        }
 
         // Delete thumbnail
         Storage::delete('public/thumbnails/' . $album->thumbnail);

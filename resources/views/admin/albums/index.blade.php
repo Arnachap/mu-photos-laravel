@@ -18,7 +18,9 @@
                 @foreach ($albums as $album)
                     @if ($album->category == $category->name)
                         <tr>
-                            <th scope="row">{{ $album->title }}</th>
+                            <th scope="row">
+                                <a href="/photos/{{ $album->id }}" class="text-dark">{{ $album->title }}</a>
+                            </th>
                             <td class="text-right">
                                 <a href="/albums/{{ $album->id }}/edit">
                                     <i class="far fa-edit text-primary"></i>

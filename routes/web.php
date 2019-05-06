@@ -30,6 +30,9 @@ Route::post('register', ['as' => '', 'uses' => 'Auth\RegisterController@register
 // Admin Routes
 Route::get('admin', 'AdminController@dashboard');
 Route::get('admin/albums', 'AdminController@albums');
+Route::get('photos/{id}', 'PhotosController@index');
+Route::post('photos', 'PhotosController@addPhotos');
+Route::delete('photos/{id}', 'PhotosController@destroy');
 
 // Clients Routes
 Route::get('clients', 'ClientsController@index')->name('clients');
