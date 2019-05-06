@@ -167,5 +167,6 @@ return [
         'time'                  => 'heure',
         'available'             => 'disponible',
         'size'                  => 'taille',
+        'category'                  => 'catégorie',
     ],
 ];

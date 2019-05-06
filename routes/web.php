@@ -11,19 +11,25 @@
 |
 */
 
-// Main pages
-Route::get('/', 'PagesController@index')->name('index');
-Route::get('a-propos', 'PagesController@about')->name('about');
-Route::get('contact', 'PagesController@contact')->name('contact');
-Route::get('prestations', 'PagesController@prestations')->name('prestations');
-Route::get('connexion', 'PagesController@login')->name('connexion');
-Route::get('galerie/{category}', 'PagesController@gallery')->name('galerie');
-Route::resource('albums', 'GalleriesController')->except('index');
+// Public Routes
+Route::view('/', 'pages.index');
+Route::view('a-propos', 'pages.about');
+Route::view('contact', 'pages.contact');
+Route::view('prestations', 'pages.prestations');
+Route::get('galerie/{category}', 'AlbumsController@category');
+Route::resource('albums', 'AlbumsController')->except('index');
 
-// Clients routes
-Auth::routes();
-Route::get('client', 'ClientController@index')->name('client');
+// Authentication Routes
+Route::get('connexion', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginForm']);
+Route::post('connexion', ['as' => '', 'uses' => 'Auth\LoginController@login']);
 
-// Admin routes
-Route::get('admin', 'AdminController@dashboard')->name('admin');
-Route::get('admin/galeries', 'AdminController@galleries');
+// Registration Routes
+Route::get('register', ['as' => 'register', 'uses' => 'Auth\RegisterController@showRegistrationForm']);
+Route::post('register', ['as' => '', 'uses' => 'Auth\RegisterController@register']);
+
+// Admin Routes
+Route::get('admin', 'AdminController@dashboard');
+Route::get('admin/albums', 'AdminController@albums');
+
+// Clients Routes
+Route::get('clients', 'ClientsController@index')->name('clients');

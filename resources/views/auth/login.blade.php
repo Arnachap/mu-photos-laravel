@@ -14,9 +14,21 @@
                     <form class="contact-form" method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <input id="name" type="text" name="name" placeholder="NOM" required autofocus>
+                        <input id="email" type="email" name="email" class="@error('email') is-invalid @enderror" placeholder="EMAIL" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                        <input id="password" type="password" placeholder="MOT DE PASSE" required>
+                        @error('name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+
+                        <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="MOT DE PASSE">
+
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
 
                         <button type="submit" class="button">{{ __('Connexion') }}</button>
                     </form>

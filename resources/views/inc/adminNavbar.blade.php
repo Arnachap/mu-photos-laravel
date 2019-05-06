@@ -6,7 +6,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="/admin/galeries" class="nav-link">Albums Publiques</a>
+                <a href="/admin/albums" class="nav-link">Albums Publiques</a>
             </li>
 
             <li class="nav-item">

@@ -19,6 +19,6 @@ class Admin
             return $next($request);
         }
 
-        return redirect('/')->with('error', 'Vous n\'avez pas accès à cette page');
+        return redirect('/connexion')->with('error', 'Vous n\'avez pas accès à cette page');
     }
 }

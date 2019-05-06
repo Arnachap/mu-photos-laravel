@@ -8,6 +8,11 @@ use App\Album;
 
 class AdminController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
     public function __construct()
     {
         $this->middleware('admin');
@@ -17,11 +22,11 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
-    public function galleries() {
+    public function albums() {
         $categories = Category::all();
         $albums = Album::all();
 
-        return view('admin.galleries')
+        return view('admin.albums.index')
             ->with('categories', $categories)
             ->with('albums', $albums);
     }

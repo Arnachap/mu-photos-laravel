@@ -12,14 +12,17 @@
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link rel="shortcut icon" href="/img/logo/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
     
     <body id="admin">
         <div class="container-fluid">
             <div class="row">
-                @include('inc.dashboardNav')
+                @include('inc.adminNavbar')
 
                 <main class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                    @include('inc.messages')
+
                     @yield('content')
                 </main>
             </div>
