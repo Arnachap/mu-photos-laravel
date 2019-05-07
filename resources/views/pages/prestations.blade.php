@@ -8,9 +8,11 @@
             <div class="row">
                 <div class="col">
                     <div class="prestation">
-                        <img src="./img/prestations/1.jpg" alt="">
+                        <a href="/galerie/les-premiers-jours">
+                            <img src="/img/prestations/1.jpg" alt="">
 
-                        <h3>Bout de chou</h3>
+                            <h3>Bout de chou</h3>
+                        </a>
 
                         <p>Des photos de votre enfant,<br>dans son petit cocon.</p>
 
@@ -22,9 +24,11 @@
 
                 <div class="col">
                     <div class="prestation">
-                        <img src="./img/prestations/2.jpg" alt="">
+                        <a href="/galerie/le-mariage">
+                            <img src="/img/prestations/2.jpg" alt="">
 
-                        <h3>Signature</h3>
+                            <h3>Signature</h3>
+                        </a>
 
                         <p>Créons ensemble un reportage photos qui vous ressemble,<br>des préparatifs à l'arrivée de la
                             pièce montée.</p>
@@ -37,9 +41,11 @@
 
                 <div class="col">
                     <div class="prestation">
-                        <img src="./img/prestations/3.jpg" alt="">
+                        <a href="/galerie/boudoir">
+                            <img src="/img/prestations/3.jpg" alt="">
 
-                        <h3>Boudoir</h3>
+                            <h3>Boudoir</h3>
+                        </a>
 
                         <p>Une séance photo à domicile,<br>tout en charme et en douceur.</p>
 
@@ -51,9 +57,11 @@
 
                 <div class="col">
                     <div class="prestation">
-                        <img src="./img/prestations/4.jpg" alt="">
+                        <a href="/galerie/en-attendant-bebe">
+                            <img src="/img/prestations/4.jpg" alt="">
 
-                        <h3>Grossesse</h3>
+                            <h3>Grossesse</h3>
+                        </a>
 
                         <p>Un moment tout en douceur,<br>pour sublimer votre corps de future Maman.</p>
 
@@ -63,9 +71,11 @@
 
                 <div class="col">
                     <div class="prestation">
-                        <img src="./img/prestations/5.jpg" alt="">
+                        <a href="/galerie/le-bonheur-en-famille">
+                            <img src="/img/prestations/5.jpg" alt="">
 
-                        <h3>Famille</h3>
+                            <h3>Famille</h3>
+                        </a>
 
                         <p>Un moment rempli de rires et de partage pour créer tous ensemble de jolis souvenirs de votre
                             tribu.</p>
@@ -82,7 +92,7 @@
 
                 <div class="col prestation">
                     <p class="price">
-                        <a href="./pdf/tarifs-mariage-2019.pdf" target="_blank">Découvrez<br>nos formules</a>
+                        <a href="/pdf/tarifs-mariage-2019.pdf" target="_blank">Découvrez<br>nos formules</a>
                     </p>
                 </div>
 

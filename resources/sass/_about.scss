@@ -19,6 +19,7 @@
     p {
         text-align: justify;
         text-indent: 2em;
+        font-weight: 300;
         @include body-font;
     }
 }
@@ -43,15 +44,16 @@
         h4 {
             font-weight: 700;
             margin-top: 1.5rem;
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
             @include heading-font;
         }
 
         p {
+            font-weight: 300;
             @include body-font;
 
             i {
-                padding-right: .5rem;
+                padding-right: 0.5rem;
             }
         }
     }

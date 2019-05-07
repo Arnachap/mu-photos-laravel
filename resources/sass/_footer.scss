@@ -23,9 +23,10 @@ footer {
             height: 30px;
             margin-bottom: 10px;
         }
-        
+
         p {
             margin-bottom: 5px;
+            font-weight: 300;
             @include body-font;
         }
     }
@@ -34,7 +35,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
         a {
             font-size: 30px;
             margin: 0 10px;

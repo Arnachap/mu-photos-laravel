@@ -21,7 +21,7 @@
             &:hover > .dropdown-menu {
                 display: block;
             }
-            
+
             &.dropdown .nav-link {
                 cursor: default;
             }
@@ -38,9 +38,9 @@
                     color: $primary;
                 }
             }
-            
+
             .dropdown-menu {
-                left: 50% ;
+                left: 50%;
                 transform: translateX(-50%);
                 top: 90%;
                 border-radius: 3px;
@@ -53,7 +53,8 @@
                     @include heading-font;
                     @include easeOut;
 
-                    &:hover {
+                    &:hover,
+                    &.active {
                         background: white;
                         color: $primary;
                     }
@@ -63,7 +64,7 @@
     }
 }
 
-@media(min-width:992px) {
+@media (min-width: 992px) {
     #mainNav {
         padding-top: 25px;
         padding-bottom: 25px;
@@ -92,7 +93,7 @@
                 #logo-img {
                     height: 40px;
                 }
-        
+
                 #logo-name {
                     height: 28px;
                 }
@@ -101,7 +102,8 @@
             .nav-link {
                 color: $grey !important;
 
-                &:hover {
+                &:hover,
+                &.active {
                     color: $primary !important;
                 }
             }

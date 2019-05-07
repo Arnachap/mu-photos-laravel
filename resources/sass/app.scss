@@ -57,10 +57,12 @@ section {
 
 .section-subtitle {
     padding: 0 60px;
+    margin-bottom: 20px;
     text-align: center;
     font-size: 16px;
     color: $grey;
     line-height: 1.2rem;
+    font-weight: 400;
     @include body-font;
 }
 

@@ -12,7 +12,7 @@
 
             <div class="row">
                 @foreach($albums as $album)
-                    <div class="col-4">
+                    <div class="col-4 p-1">
                         <div class="album-link">
                             <img class="img-fluid" src="/storage/thumbnails/{{ $album->thumbnail }}" alt="">
 

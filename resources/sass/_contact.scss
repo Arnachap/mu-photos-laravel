@@ -2,7 +2,7 @@
     .contact-form {
         display: block;
         margin-top: 40px;
-    
+
         input,
         textarea {
             width: 100%;
@@ -12,12 +12,12 @@
             padding-bottom: 10px;
             margin-bottom: 30px;
             @include heading-font;
-    
+
             &:focus {
                 outline: none;
             }
         }
-    
+
         textarea {
             height: 150px;
             resize: vertical;
@@ -47,6 +47,7 @@
         }
 
         p {
+            font-weight: 300;
             @include body-font;
 
             span {

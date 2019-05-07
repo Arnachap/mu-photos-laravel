@@ -15,11 +15,14 @@ header {
 }
 
 .portfolio-link {
-    margin-top: 15px;
     position: relative;
     display: inline-block;
     background: white;
     overflow: hidden;
+
+    * {
+        @include easeOut;
+    }
 
     a {
         position: absolute;
@@ -30,44 +33,18 @@ header {
         z-index: 1;
     }
 
-    *,
-    &:before,
-    &:after {
-        @include easeOut;
-    }
-
-    &:before,
-    &:after {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        content: '';
-        background-color: $primary;
-        z-index: 1;
-        opacity: 0;
-    }
-
-    &:before {
-        width: 0;
-        height: 3px;
-    }
-
-    &:after {
-        height: 0;
-        width: 3px;
-    }
-
     .caption {
         position: absolute;
-        left: 0;
-        bottom: 0;
-        padding: 20px 20px;
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%, 50%);
 
         h3 {
             opacity: 0;
             color: $primary;
             font-size: 40px;
-            @include heading-font;
+            text-align: center;
+            @include script-font;
         }
     }
 
@@ -76,22 +53,9 @@ header {
             opacity: 0.2;
             transform: scale(1.2);
         }
-        
-        &:before {
-            opacity: 1;
-            width: 80px;
-            transition-delay: 0.3s;
-        }
-
-        &:after {
-            opacity: 1;
-            height: 80px;
-            transition-delay: 0.3s;
-        }
 
         h3 {
             opacity: 1;
-            transition-delay: 0.5s;
         }
     }
 }

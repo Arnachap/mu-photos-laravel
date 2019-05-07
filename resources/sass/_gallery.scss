@@ -4,7 +4,9 @@
     color: $primary;
     background: white;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
+    width: auto;
+    height: 230px;
 
     *,
     &:before,
@@ -60,7 +62,7 @@
 
     &:hover {
         img {
-            opacity: .2;
+            opacity: 0.2;
             transform: scale(1.2);
         }
 
