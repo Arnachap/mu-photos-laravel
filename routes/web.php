@@ -17,7 +17,6 @@ Route::view('a-propos', 'pages.about');
 Route::view('contact', 'pages.contact');
 Route::view('prestations', 'pages.prestations');
 Route::get('galerie/{category}', 'AlbumsController@category');
-Route::resource('albums', 'AlbumsController')->except('index');
 
 // Authentication Routes
 Route::get('connexion', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginForm']);
@@ -33,6 +32,7 @@ Route::get('admin/albums', 'AdminController@albums');
 Route::get('photos/{id}', 'PhotosController@index');
 Route::post('photos', 'PhotosController@addPhotos');
 Route::delete('photos/{id}', 'PhotosController@destroy');
+Route::resource('albums', 'AlbumsController')->except('index');
 
 // Clients Routes
 Route::get('clients', 'ClientsController@index')->name('clients');

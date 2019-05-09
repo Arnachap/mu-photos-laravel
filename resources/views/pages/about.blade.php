@@ -4,13 +4,13 @@
     <section id="about">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="px-5">
                         <img class="img-fluid" src="./img/about/about.jpg" alt="">
                     </div>
                 </div>
 
-                <div class="col-6">
+                <div class="col-md-6">
                     <h2 class="section-title">Muriel</h2>
 
                     <h3>25 ans, gymnaste passionnée<br>et passionnée de photographie. </h3>
@@ -39,7 +39,7 @@
             <h2 class="section-title">Témoignages</h2>
 
             <div class="row text-center">
-                <div class="col-4">
+                <div class="col-md-4">
                     <div class="testimonial">
                         <div class="avatar mx-auto">
                             <img src="./img/testimonial/1.jpg" class="img-fluid" alt="">
@@ -52,7 +52,7 @@
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-md-4">
                     <div class="testimonial">
                         <div class="avatar mx-auto">
                             <img src="./img/testimonial/2.jpg" class="img-fluid" alt="">
@@ -65,7 +65,7 @@
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-md-4">
                     <div class="testimonial">
                         <div class="avatar mx-auto">
                             <img src="./img/testimonial/3.jpg" class="img-fluid" alt="">

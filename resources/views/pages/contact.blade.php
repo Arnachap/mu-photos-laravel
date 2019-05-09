@@ -8,7 +8,7 @@
                     <h2 class="section-title">Contact</h2>
                 </div>
 
-                <div class="col-6">
+                <div class="col-md-6">
                     <form class="contact-form">
                         <input type="text" placeholder="VOTRE NOM">
                         <input type="email" placeholder="VOTRE E-MAIL">
@@ -18,7 +18,7 @@
                     </form>
                 </div>
 
-                <div class="col-6">
+                <div class="col-md-6">
                     <h3 class="section-subtitle">Vous avez une idée en tête ou mieux ... Un projet ! N'hésitez pas à me
                         contacter par mail ou par téléphone en m'indiquant vos idées, vos envies, tout ce qui vous
                         semble important pour la réussite de votre projet. Je ferais de mon mieux pour vous répondre

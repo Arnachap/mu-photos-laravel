@@ -22,6 +22,7 @@
                                 @if ($album->category == $category->name)
                                     <tr>
                                         <th scope="row">
+                                            <i class="far {{ $album->public ? 'fa-play-circle text-success' : 'fa-pause-circle text-danger' }}"></i>
                                             <a href="/photos/{{ $album->id }}" class="text-dark">{{ $album->title }}</a>
                                         </th>
 

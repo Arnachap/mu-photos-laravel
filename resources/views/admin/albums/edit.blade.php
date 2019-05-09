@@ -9,11 +9,13 @@
                 {{ Form::open(['action' => ['AlbumsController@update', $album->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) }}
                     <div class="form-group">
                         {{ Form::label('title', 'Titre :') }}
+
                         {{ Form::text('title', $album->title, ['class' => 'form-control', 'placeholder' => 'Titre de l\'album', 'autofocus']) }}
                     </div>
 
                     <div class="form-group">
                         {{ Form::label('intro', 'Introduction :') }}
+
                         {{ Form::textarea('intro', $album->intro, ['class' => 'form-control', 'placeholder' => 'Introduction', 'rows' => '3']) }}
                     </div>
 
@@ -42,6 +44,12 @@
                         <br>
 
                         <small class="text-muted">Attention : maximum 2Mo</small>
+                    </div>
+
+                    <div class="form-group form-check">
+                        {{ Form::checkbox('public', true, ['class' => 'form-check-input']) }}
+
+                        {{ Form::label('public', 'Publier', ['class' => 'form-check-label']) }}
                     </div>
 
                     {{ Form::hidden('_method', 'PUT') }}

@@ -33,7 +33,10 @@ class AlbumsController extends Controller
         // Use foreach as a simple object to array converter
         foreach ($categories as $category) {
             // Get albums from this category
-            $albums = Album::where('category', $category->name)->get();
+            $albums = Album::where([
+                ['category', $category->name],
+                ['public', true]
+            ])->get();
 
             return view('pages.category')
                 ->with('albums', $albums)
@@ -155,6 +158,7 @@ class AlbumsController extends Controller
         $album->title = $request->input('title');
         $album->intro = $request->input('intro');
         $album->category = $request->input('category');
+        $album->public = $request->input('public');
         $album->save();
 
         return redirect('/admin/albums')->with('success', 'Album modifié !');

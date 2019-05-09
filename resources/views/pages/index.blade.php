@@ -30,7 +30,7 @@
                     <h2 class="section-title">Portfolio</h2>
                 </div>
 
-                <div class="col-6 p-1">
+                <div class="col-md-6 p-1">
                     <div class="portfolio-link">
                         <img class="img-fluid" src="/img/home/mariage.jpg" alt="">
 
@@ -42,7 +42,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 p-1">
+                <div class="col-md-6 p-1">
                     <div class="portfolio-link">
                         <img class="img-fluid" src="/img/home/bébé.jpg" alt="">
 
@@ -54,7 +54,7 @@
                     </div>
                 </div>
 
-                <div class="col-4 p-1">
+                <div class="col-md-4 p-1">
                     <div class="portfolio-link">
                         <img class="img-fluid" src="/img/home/portrait.jpg" alt="">
 
@@ -66,7 +66,7 @@
                     </div>
                 </div>
 
-                <div class="col-4 p-1">
+                <div class="col-md-4 p-1">
                     <div class="portfolio-link">
                         <img class="img-fluid" src="/img/home/famille.jpg" alt="">
 
@@ -78,7 +78,7 @@
                     </div>
                 </div>
 
-                <div class="col-4 p-1">
+                <div class="col-md-4 p-1">
                     <div class="portfolio-link">
                         <img class="img-fluid" src="/img/home/boudoir.jpg" alt="">
 
