@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Album;
+use App\User;
 
 class AdminController extends Controller
 {
@@ -29,5 +30,11 @@ class AdminController extends Controller
         return view('admin.albums.index')
             ->with('categories', $categories)
             ->with('albums', $albums);
+    }
+
+    public function clients() {
+        $users = User::all();
+
+        return view('admin.clients.index')->with('users', $users);
     }
 }

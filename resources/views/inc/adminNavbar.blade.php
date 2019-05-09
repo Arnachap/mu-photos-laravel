@@ -14,7 +14,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="/" class="nav-link">Clients</a>
+                <a href="/admin/clients" class="nav-link">Clients</a>
             </li>
 
             <li class="nav-item">
