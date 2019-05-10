@@ -22,7 +22,13 @@
                     <th scope="row">{{ $user->id }}</th>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
-                    <td>album</td>
+                    <td>
+                        @foreach($albums as $album)
+                            @if ($album->userId == $user->id)
+                                {{ $album->title }}
+                            @endif
+                        @endforeach
+                    </td>
                 </tr>
             @endforeach
         </tbody>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Album;
 use App\User;
+use App\PrivateAlbum;
 
 class AdminController extends Controller
 {
@@ -34,7 +35,10 @@ class AdminController extends Controller
 
     public function clients() {
         $users = User::all();
+        $albums = PrivateAlbum::all();
 
-        return view('admin.clients.index')->with('users', $users);
+        return view('admin.clients.index')
+            ->with('users', $users)
+            ->with('albums', $albums);
     }
 }

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\PrivateAlbum;
+use App\PrivatePhoto;
 use App\User;
 
 class PrivateAlbumsController extends Controller
@@ -130,6 +132,13 @@ class PrivateAlbumsController extends Controller
     public function destroy($id)
     {
         $album = PrivateAlbum::find($id);
+        $photos = PrivatePhoto::where('albumId', $album->id)->get();
+
+        // Delete Photos from DB & storage
+        foreach ($photos as $photo) {
+            Storage::delete('public/private-photos/' . $album->id . '/' . $photo->photo);
+            $photo->delete();
+        }
 
         $album->delete();
 

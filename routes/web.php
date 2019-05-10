@@ -28,13 +28,18 @@ Route::post('register', ['as' => '', 'uses' => 'Auth\RegisterController@register
 
 // Admin Routes
 Route::get('admin', 'AdminController@dashboard');
-Route::get('admin/albums', 'AdminController@albums');
-Route::get('photos/{id}', 'PhotosController@index');
-Route::post('photos', 'PhotosController@addPhotos');
-Route::delete('photos/{id}', 'PhotosController@destroy');
-Route::get('/admin/clients', 'AdminController@clients');
-Route::resource('albums', 'AlbumsController')->except('index');
-Route::resource('albums-clients', 'PrivateAlbumsController');
+    // Admin public albums routes
+    Route::get('admin/albums', 'AdminController@albums');
+    Route::get('photos/{id}', 'PhotosController@index');
+    Route::post('photos', 'PhotosController@addPhotos');
+    Route::delete('photos/{id}', 'PhotosController@destroy');
+    Route::resource('albums', 'AlbumsController')->except('index');
+    // Admin clients albums routes
+    Route::get('/admin/clients', 'AdminController@clients');
+    Route::get('photos-clients/{id}', 'PrivatePhotosController@index');
+    Route::post('photos-clients', 'PrivatePhotosController@addPhotos');
+    Route::delete('photos-clients/{id}', 'PrivatePhotosController@destroy');
+    Route::resource('albums-clients', 'PrivateAlbumsController');
 
 // Clients Routes
 Route::get('clients', 'ClientsController@index')->name('clients');

@@ -18,7 +18,9 @@
         <tbody>
             @foreach($albums as $album)
                 <tr>
-                    <th scope="row">{{ $album->title }}</th>
+                    <th scope="row">
+                        <a href="/photos-clients/{{ $album->id }}" class="text-dark">{{ $album->title }}</a>
+                    </th>
                     <td>
                         @foreach($users as $user)
                             @if($album->userId == $user->id)
