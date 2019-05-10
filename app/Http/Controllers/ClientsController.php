@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\PrivateAlbum;
+use App\PrivatePhoto;
 
 class ClientsController extends Controller
 {
@@ -27,6 +29,13 @@ class ClientsController extends Controller
             return redirect('/admin');
         }
 
-        return view('clients.index');
+        $user = auth()->user();
+        $album = PrivateAlbum::where('userId', $user->id)->first();
+        $photos = PrivatePhoto::where('albumId', $album->id)->get();
+
+        return view('clients.index')
+            ->with('user', $user)
+            ->with('album', $album)
+            ->with('photos', $photos);
     }
 }

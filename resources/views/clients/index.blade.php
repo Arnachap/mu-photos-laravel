@@ -1,5 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>User</h1>
+    <div class="container">
+        <div class="row">
+            <h1 class="section-title">{{ $album->title }}</h1>
+        </div>
+
+        <div class="row">
+            @foreach($photos as $photo)
+                <div class="col-3">
+                    <img src="/storage/private-photos/{{ $album->id }}/{{ $photo->photo }}" alt="" class="img-fluid">
+                </div>
+            @endforeach
+        </div>
+    </div>
 @endsection
