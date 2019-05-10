@@ -168,6 +168,7 @@ return [
         'available'             => 'disponible',
         'size'                  => 'taille',
         'category'              => 'catégorie',
-        'thumbnail'             => 'image'
+        'thumbnail'             => 'image',
+        'clientId'              => 'client'
     ],
 ];

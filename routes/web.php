@@ -32,8 +32,9 @@ Route::get('admin/albums', 'AdminController@albums');
 Route::get('photos/{id}', 'PhotosController@index');
 Route::post('photos', 'PhotosController@addPhotos');
 Route::delete('photos/{id}', 'PhotosController@destroy');
-Route::resource('albums', 'AlbumsController')->except('index');
 Route::get('/admin/clients', 'AdminController@clients');
+Route::resource('albums', 'AlbumsController')->except('index');
+Route::resource('albums-clients', 'PrivateAlbumsController');
 
 // Clients Routes
 Route::get('clients', 'ClientsController@index')->name('clients');

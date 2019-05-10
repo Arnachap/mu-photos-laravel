@@ -8,13 +8,13 @@
             <li class="nav-item">
                 <a href="/admin/albums" class="nav-link">Albums Publiques</a>
             </li>
-
+            
             <li class="nav-item">
-                <a href="/" class="nav-link">Albums privés</a>
+                <a href="/admin/clients" class="nav-link">Clients</a>
             </li>
 
             <li class="nav-item">
-                <a href="/admin/clients" class="nav-link">Clients</a>
+                <a href="/albums-clients" class="nav-link">Albums clients</a>
             </li>
 
             <li class="nav-item">
