@@ -55,12 +55,12 @@ class PrivatePhotosController extends Controller
     public function addArchive(Request $request) {
         $albumId = $request->input('albumId');
         $extension = '.' . $request->file('archive')->getClientOriginalExtension();
-
-        Storage::putFileAs('public/archives/' . $albumId, $request->file('archive'), $albumId . $extension);
-
+        
         $album = PrivateAlbum::find($albumId);
-        $album->archive = $albumId . $extension;
+        $album->archive = $album->title . $extension;
         $album->save();
+
+        Storage::putFileAs('public/archives/' . $albumId, $request->file('archive'), $album->title . $extension);
 
         return redirect('/photos-clients/' . $albumId)->with('success', 'Archive ajoutées !');
     }

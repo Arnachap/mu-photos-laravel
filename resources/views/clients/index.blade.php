@@ -9,7 +9,7 @@
                 @if($album->archive)
                     <button class="button">
                         <a href="/storage/archives/{{ $album->id }}/{{ $album->archive }}" class="text-white" download>
-                            <i class="fas fa-images"></i>&nbsp;&nbsp;Télécharger l'album
+                            <i class="fas fa-cloud-download-alt"></i>&nbsp;&nbsp;Télécharger l'album
                         </a>
                     </button>
                 @endif

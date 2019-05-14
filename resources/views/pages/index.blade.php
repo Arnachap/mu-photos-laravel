@@ -2,23 +2,19 @@
 
 @section('content')
     <header>
-        <div id="headerSlider" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="2000">
+        <div id="headerSlider" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="3000">
             <ol class="carousel-indicators">
-                <li data-target="#headerSlider" data-slide-to="0" class="active"></li>
-                <li data-target="#headerSlider" data-slide-to="1"></li>
-                <li data-target="#headerSlider" data-slide-to="2"></li>
+                @foreach($slides as $index => $slide)
+                    <li data-target="#headerSlider" data-slide-to="{{ $index }}" {{ $loop->first ? ' class=active' : '' }}></li>
+                @endforeach
             </ol>
 
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/img/home/slider1.jpg" class="d-block w-100" alt="/img/slider1.jpg">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/home/slider2.jpg" class="d-block w-100" alt="/img/slider1.jpg">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/home/slider3.jpg" class="d-block w-100" alt="/img/slider1.jpg">
-                </div>
+                @foreach($slides as $slide)
+                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                        <img src="/storage/slides/{{ $slide->filename }}" class="d-block w-100" alt="/img/slider1.jpg">
+                    </div>
+                @endforeach
             </div>
         </div>
     </header>

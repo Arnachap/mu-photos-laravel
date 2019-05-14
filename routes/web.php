@@ -12,7 +12,7 @@
 */
 
 // Public Routes
-Route::view('/', 'pages.index');
+Route::get('/', 'PagesController@index');
 Route::view('a-propos', 'pages.about');
 Route::view('contact', 'pages.contact');
 Route::view('prestations', 'pages.prestations');
@@ -41,6 +41,8 @@ Route::get('admin', 'AdminController@dashboard');
     Route::post('archive-clients', 'PrivatePhotosController@addArchive');
     Route::delete('photos-clients/{id}', 'PrivatePhotosController@destroy');
     Route::resource('albums-clients', 'PrivateAlbumsController');
+    // Admin slider routes
+    Route::resource('slider', 'SliderController')->except(['create', 'show', 'edit']);
 
 // Clients Routes
 Route::get('clients', 'ClientsController@index')->name('clients');

@@ -18,7 +18,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="/" class="nav-link">Slider accueil</a>
+                <a href="/slider" class="nav-link">Slider accueil</a>
             </li>
 
             <li class="nav-item">
