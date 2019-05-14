@@ -1,33 +1,61 @@
 footer {
     background-color: $black;
-    padding-top: 20px;
+    padding: 20px 0;
     color: white;
+    overflow: hidden;
 
     .logo {
         display: flex;
         align-items: center;
         justify-content: center;
 
-        img {
-            height: 80px;
+        img:nth-child(1) {
+            height: 50px;
+        }
+
+        img:nth-child(2) {
+            height: 26px;
+            margin-left: 20px;
+            margin-bottom: 20px;
         }
     }
 
     .address {
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: center;
-
-        img {
-            height: 30px;
-            margin-bottom: 10px;
-        }
-
         p {
             margin-bottom: 5px;
             font-weight: 300;
+            text-align: right;
             @include body-font;
+        }
+
+        .line-one {
+            position: absolute;
+            width: 450px;
+            height: 0.5px;
+            right: 0;
+            top: 24px;
+            margin-right: -40px;
+            background-color: white;
+        }
+
+        .line-two {
+            position: absolute;
+            width: 380px;
+            height: 0.5px;
+            right: 0;
+            top: 30px;
+            margin-right: -40px;
+            background-color: $primary;
+        }
+
+        .line-three {
+            position: absolute;
+            width: 310px;
+            height: 0.5px;
+            right: 0;
+            top: 36px;
+            margin-right: -40px;
+            background-color: $primary-dark;
         }
     }
 

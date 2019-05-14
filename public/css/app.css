@@ -10767,8 +10767,9 @@ a.text-dark:focus {
 
 footer {
   background-color: #333;
-  padding-top: 20px;
+  padding: 20px 0;
   color: white;
+  overflow: hidden;
 }
 
 footer .logo {
@@ -10777,26 +10778,51 @@ footer .logo {
   justify-content: center;
 }
 
-footer .logo img {
-  height: 80px;
+footer .logo img:nth-child(1) {
+  height: 50px;
 }
 
-footer .address {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-}
-
-footer .address img {
-  height: 30px;
-  margin-bottom: 10px;
+footer .logo img:nth-child(2) {
+  height: 26px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 footer .address p {
   margin-bottom: 5px;
   font-weight: 300;
+  text-align: right;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer .address .line-one {
+  position: absolute;
+  width: 450px;
+  height: 0.5px;
+  right: 0;
+  top: 24px;
+  margin-right: -40px;
+  background-color: white;
+}
+
+footer .address .line-two {
+  position: absolute;
+  width: 380px;
+  height: 0.5px;
+  right: 0;
+  top: 30px;
+  margin-right: -40px;
+  background-color: #5ec5ca;
+}
+
+footer .address .line-three {
+  position: absolute;
+  width: 310px;
+  height: 0.5px;
+  right: 0;
+  top: 36px;
+  margin-right: -40px;
+  background-color: #40b9bf;
 }
 
 footer .social {
