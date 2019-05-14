@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
 use App\PrivatePhoto;
 use App\PrivateAlbum;
@@ -49,6 +50,19 @@ class PrivatePhotosController extends Controller
         } else {
             return redirect('/photos-clients/' . $albumId)->with('error', 'Aucun fichier séléctionné...');
         }
+    }
+
+    public function addArchive(Request $request) {
+        $albumId = $request->input('albumId');
+        $extension = '.' . $request->file('archive')->getClientOriginalExtension();
+
+        Storage::putFileAs('public/archives/' . $albumId, $request->file('archive'), $albumId . $extension);
+
+        $album = PrivateAlbum::find($albumId);
+        $album->archive = $albumId . $extension;
+        $album->save();
+
+        return redirect('/photos-clients/' . $albumId)->with('success', 'Archive ajoutées !');
     }
 
     public function destroy($id) {

@@ -38,6 +38,7 @@ Route::get('admin', 'AdminController@dashboard');
     Route::get('/admin/clients', 'AdminController@clients');
     Route::get('photos-clients/{id}', 'PrivatePhotosController@index');
     Route::post('photos-clients', 'PrivatePhotosController@addPhotos');
+    Route::post('archive-clients', 'PrivatePhotosController@addArchive');
     Route::delete('photos-clients/{id}', 'PrivatePhotosController@destroy');
     Route::resource('albums-clients', 'PrivateAlbumsController');
 

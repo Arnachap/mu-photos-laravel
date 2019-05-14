@@ -5,6 +5,14 @@
         <div class="row">
             <div class="col-12 mt-5">
                 <h1 class="section-title">{{ $album->title }}</h1>
+
+                @if($album->archive)
+                    <button class="button">
+                        <a href="/storage/archives/{{ $album->id }}/{{ $album->archive }}" class="text-white" download>
+                            <i class="fas fa-images"></i>&nbsp;&nbsp;Télécharger l'album
+                        </a>
+                    </button>
+                @endif
             </div>
         </div>
 

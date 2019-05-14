@@ -3,19 +3,39 @@
 @section('content')
     <h1 class="section-title">{{ $album->title }}</h1>
 
-    {{ Form::open(['action' => 'PrivatePhotosController@addPhotos', 'method' => 'POST', 'enctype' => 'multipart/form-data']) }}
-        <div class="form-group text-center">
-            {{ Form::label('photos', 'Ajouter des photos à l\'album :') }}
-            
-            <br>
-
-            {{ Form::file('photos[]', ['multiple' => 'true']) }}
+    <div class="row">
+        <div class="col-6">
+            {{ Form::open(['action' => 'PrivatePhotosController@addPhotos', 'method' => 'POST', 'enctype' => 'multipart/form-data']) }}
+                <div class="form-group text-center">
+                    {{ Form::label('photos', 'Ajouter des photos à l\'album :') }}
+                    
+                    <br>
+        
+                    {{ Form::file('photos[]', ['multiple' => 'true']) }}
+                </div>
+        
+                {{ Form::hidden('albumId', $album->id) }}
+                
+                {{ Form::submit('Ajouter les photos', ['class' => 'button mb-5']) }}
+            {{ Form::close() }}
         </div>
 
-        {{ Form::hidden('albumId', $album->id) }}
-        
-        {{ Form::submit('Ajouter les photos', ['class' => 'button mb-5']) }}
-    {{ Form::close() }}
+        <div class="col-6">
+            {{ Form::open(['action' => 'PrivatePhotosController@addArchive', 'method' => 'POST', 'enctype' => 'multipart/form-data']) }}
+                <div class="form-group text-center">
+                    {{ Form::label('photos', 'Ajouter des photos à l\'album :') }}
+
+                    <br>
+
+                    {{ Form::file('archive') }}
+                </div>
+
+                {{ Form::hidden('albumId', $album->id) }}
+
+                {{ Form::submit('Ajouter une archive', ['class' => 'button mb-5']) }}
+            {{ Form::close() }}
+        </div>
+    </div>
 
     <div class="row">
         @foreach($photos as $photo)
