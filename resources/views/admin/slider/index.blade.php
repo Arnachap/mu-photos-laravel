@@ -27,8 +27,10 @@
                     {{ Form::hidden('id[]', $slide->id) }}
                 </div>
             @endforeach
+        </div>
 
-            {{ Form::submit('Sauvegarder l\'ordre des photos', ['class' => 'button mt-5']) }}
+        <div class="row">
+            {{ Form::submit('Sauvegarder l\'ordre des photos', ['class' => 'button my-2']) }}
         </div>
     {{ Form::close() }}
 

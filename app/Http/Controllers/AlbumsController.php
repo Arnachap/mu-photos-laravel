@@ -99,7 +99,7 @@ class AlbumsController extends Controller
     public function show($id)
     {
         $album = Album::find($id);
-        $photos = Photo::where('albumId', $album->id)->get();
+        $photos = Photo::where('albumId', $album->id)->orderBy('position')->get();
 
         return view('pages.album')
             ->with('album', $album)

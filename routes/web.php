@@ -33,11 +33,13 @@ Route::get('admin', 'AdminController@dashboard');
     Route::get('photos/{id}', 'PhotosController@index');
     Route::post('photos', 'PhotosController@addPhotos');
     Route::delete('photos/{id}', 'PhotosController@destroy');
+    Route::post('sort-photos', 'PhotosController@sort');
     Route::resource('albums', 'AlbumsController')->except('index');
     // Admin clients albums routes
     Route::get('/admin/clients', 'AdminController@clients');
     Route::get('photos-clients/{id}', 'PrivatePhotosController@index');
     Route::post('photos-clients', 'PrivatePhotosController@addPhotos');
+    Route::post('sort-photos-clients', 'PrivatePhotosController@sort');
     Route::post('archive-clients', 'PrivatePhotosController@addArchive');
     Route::delete('photos-clients/{id}', 'PrivatePhotosController@destroy');
     Route::resource('albums-clients', 'PrivateAlbumsController');

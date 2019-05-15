@@ -22,7 +22,7 @@ class PrivatePhotosController extends Controller
 
     public function index($id) {
         $album = PrivateAlbum::find($id);
-        $photos = PrivatePhoto::where('albumId', $album->id)->get();
+        $photos = PrivatePhoto::where('albumId', $album->id)->orderBy('position')->get();
 
         return view('admin.privateAlbums.photos')
             ->with('album', $album)
@@ -75,5 +75,15 @@ class PrivatePhotosController extends Controller
         $photo->delete();
 
         return back()->with('success', 'Photo supprimé !');
+    }
+
+    public function sort(Request $request) {
+        foreach ($request->id as $index => $id) {
+            $photo = PrivatePhoto::find($id);
+            $photo->position = $index;
+            $photo->save();
+        }
+
+        return redirect('/photos-clients/' . $photo->albumId)->with('success', 'Ordre des photos sauvegarder !');
     }
 }

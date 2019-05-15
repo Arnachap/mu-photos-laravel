@@ -39372,10 +39372,13 @@ if (token) {
 var Sortable = __webpack_require__(/*! sortablejs */ "./node_modules/sortablejs/Sortable.js");
 
 var el = document.getElementById('sortable');
-var sortable = Sortable.create(el, {
-  animation: 300,
-  easing: 'ease-out'
-});
+
+if (el) {
+  var sortable = Sortable.create(el, {
+    animation: 300,
+    easing: 'ease-out'
+  });
+}
 
 /***/ }),
 

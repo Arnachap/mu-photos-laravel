@@ -31,7 +31,7 @@ class ClientsController extends Controller
 
         $user = auth()->user();
         $album = PrivateAlbum::where('userId', $user->id)->first();
-        $photos = PrivatePhoto::where('albumId', $album->id)->get();
+        $photos = PrivatePhoto::where('albumId', $album->id)->orderBy('position')->get();
 
         return view('clients.index')
             ->with('user', $user)

@@ -21,7 +21,7 @@ class PhotosController extends Controller
 
     public function index($id) {
         $album = Album::find($id);
-        $photos = Photo::where('albumId', $album->id)->get();
+        $photos = Photo::where('albumId', $album->id)->orderBy('position')->get();
 
         return view('admin.albums.photos')
             ->with('album', $album)
@@ -61,5 +61,18 @@ class PhotosController extends Controller
         $photo->delete();
 
         return back()->with('success', 'Photo supprimé !');
+    }
+
+    /*
+    *   Sort album photos
+    */
+    public function sort(Request $request) {
+        foreach ($request->id as $index => $id) {
+            $photo = Photo::find($id);
+            $photo->position = $index;
+            $photo->save();
+        }
+
+        return redirect('/photos/' . $photo->albumId)->with('success', 'Ordre des photos sauvegarder !');
     }
 }
