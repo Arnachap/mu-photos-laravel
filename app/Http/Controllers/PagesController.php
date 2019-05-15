@@ -8,7 +8,7 @@ use App\Slide;
 class PagesController extends Controller
 {
     public function index() {
-        $slides = Slide::all();
+        $slides = Slide::orderBy('position')->get();
 
         return view('pages.index')->with('slides', $slides);
     }

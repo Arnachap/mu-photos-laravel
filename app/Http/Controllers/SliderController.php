@@ -25,7 +25,7 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $slides = Slide::all();
+        $slides = Slide::orderBy('position')->get();
 
         return view('admin.slider.index')->with('slides', $slides);
     }
@@ -80,5 +80,18 @@ class SliderController extends Controller
         $slide->delete();
 
         return redirect('/slider')->with('success', 'Photo supprimée !');
+    }
+
+    /*
+    *   Sort slider photos
+    */
+    public function sort(Request $request) {
+        foreach ($request->id as $index => $id) {
+            $slide = Slide::find($id);
+            $slide->position = $index;
+            $slide->save();
+        }
+
+        return redirect('/slider')->with('success', 'Ordre des photos sauvegarder !');
     }
 }

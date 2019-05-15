@@ -43,6 +43,7 @@ Route::get('admin', 'AdminController@dashboard');
     Route::resource('albums-clients', 'PrivateAlbumsController');
     // Admin slider routes
     Route::resource('slider', 'SliderController')->except(['create', 'show', 'edit']);
+    Route::post('sort', 'SliderController@sort');
 
 // Clients Routes
 Route::get('clients', 'ClientsController@index')->name('clients');

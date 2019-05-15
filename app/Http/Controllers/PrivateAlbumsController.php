@@ -140,6 +140,9 @@ class PrivateAlbumsController extends Controller
             $photo->delete();
         }
 
+        // Delete archive
+        Storage::delete('public/archives/' . $album->id . '/' . $album->archive);
+
         $album->delete();
 
         return redirect('/albums-clients')->with('success', 'Album client supprimé !');
