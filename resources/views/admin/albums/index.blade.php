@@ -7,7 +7,7 @@
     </button>
 
     @foreach($categories as $category)
-        <div class="row mb-1">
+        <div class="row mb-3">
             <div class="col-12">
                 <a class="btn btn-light btn-block text-left" data-toggle="collapse" href="#collapse{{ $category->id }}" role="button" aria-expanded="false" aria-controls="collapse{{ $category->id }}">
                         {{ $category->title }}

@@ -10,7 +10,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" style="min-height: 50vh;">
                 @foreach($albums as $album)
                     <div class="col-4 p-1">
                         <div class="album-link">

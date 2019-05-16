@@ -10880,6 +10880,7 @@ header .carousel-indicators li {
   position: absolute;
   left: 50%;
   bottom: 50%;
+  width: 100%;
   -webkit-transform: translate(-50%, 50%);
           transform: translate(-50%, 50%);
 }
@@ -10887,7 +10888,7 @@ header .carousel-indicators li {
 .portfolio-link .caption h3 {
   opacity: 0;
   color: #5ec5ca;
-  font-size: 40px;
+  font-size: 38px;
   text-align: center;
   font-family: "Kaushan Script", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }

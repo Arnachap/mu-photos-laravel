@@ -27,10 +27,10 @@
                 </div>
 
                 <div class="col-md-6 p-1">
-                    <div class="portfolio-link">
-                        <img class="img-fluid" src="/img/home/mariage.jpg" alt="">
+                    <div class="portfolio-link d-block" style="max-height: 373px; overflow: hidden">
+                        <img class="img-fluid" src="/storage/photos/{{ $photoMariage->albumId }}/{{ $photoMariage->photo }}" alt="">
 
-                        <a href="#"></a>
+                        <a href="/galerie/le-mariage"></a>
 
                         <div class="caption">
                             <h3>Le Mariage</h3>
@@ -39,10 +39,10 @@
                 </div>
 
                 <div class="col-md-6 p-1">
-                    <div class="portfolio-link">
-                        <img class="img-fluid" src="/img/home/bébé.jpg" alt="">
+                    <div class="portfolio-link d-block" style="max-height: 373px; overflow: hidden">
+                        <img class="img-fluid" src="/storage/photos/{{ $photoBebe->albumId }}/{{ $photoBebe->photo }}" alt="">
 
-                        <a href="#"></a>
+                        <a href="/galerie/les-premiers-jours"></a>
 
                         <div class="caption">
                             <h3>Les Premiers Jours</h3>
@@ -51,37 +51,46 @@
                 </div>
 
                 <div class="col-md-4 p-1">
-                    <div class="portfolio-link">
-                        <img class="img-fluid" src="/img/home/portrait.jpg" alt="">
+                    <div class="portfolio-link d-block" style="max-height: 247px; overflow: hidden">
+                        <img 
+                            class="img-fluid" 
+                            src="/storage/photos/{{ $photoAmoureux->albumId }}/{{ $photoAmoureux->photo }}" 
+                            alt="">
 
-                        <a href="#"></a>
+                        <a href="/galerie/en-amoureux"></a>
 
                         <div class="caption">
-                            <h3>Portraits</h3>
+                            <h3>En amoureux</h3>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4 p-1">
-                    <div class="portfolio-link">
-                        <img class="img-fluid" src="/img/home/famille.jpg" alt="">
+                    <div class="portfolio-link d-block" style="max-height: 247px; overflow: hidden">
+                        <img
+                            class="img-fluid"
+                            src="/storage/photos/{{ $photoGrossesse->albumId }}/{{ $photoGrossesse->photo }}"
+                            alt="">
 
-                        <a href="#"></a>
+                        <a href="/galerie/en-attendant-bebe"></a>
 
                         <div class="caption">
-                            <h3>En Famille</h3>
+                            <h3>En attendant bébé</h3>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4 p-1">
-                    <div class="portfolio-link">
-                        <img class="img-fluid" src="/img/home/boudoir.jpg" alt="">
+                    <div class="portfolio-link d-block" style="max-height: 247px; overflow: hidden">
+                        <img
+                            class="img-fluid"
+                            src="/storage/photos/{{ $photoSport->albumId }}/{{ $photoSport->photo }}"
+                            alt="">
 
-                        <a href="#"></a>
+                        <a href="/galerie/sport"></a>
 
                         <div class="caption">
-                            <h3>Boudoir</h3>
+                            <h3>Sport</h3>
                         </div>
                     </div>
                 </div>
