@@ -39309,8 +39309,12 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./sortable */ "./resources/js/sortable.js");
 
-var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"); // Disable right clic on images
 
+
+$(document).on('contextmenu', 'img', function () {
+  return false;
+});
 var pathname = window.location.pathname;
 
 if (pathname === '/') {

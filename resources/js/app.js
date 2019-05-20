@@ -2,6 +2,11 @@ require('./bootstrap');
 require('./sortable');
 const $ = require('jquery');
 
+// Disable right clic on images
+$(document).on('contextmenu', 'img', function() {
+    return false;
+});
+
 var pathname = window.location.pathname;
 if (pathname === '/') {
     window.onscroll = function() {

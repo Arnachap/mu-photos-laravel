@@ -14,7 +14,7 @@ class AddArchiveToPrivateAlbumsTable extends Migration
     public function up()
     {
         Schema::table('private_albums', function (Blueprint $table) {
-            $table->string('archive');
+            $table->string('archive')->nullable();
         });
     }
 
