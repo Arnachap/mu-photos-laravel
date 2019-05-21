@@ -190,4 +190,24 @@ class AlbumsController extends Controller
 
         return redirect('/admin/albums')->with('success', 'Album supprimé !');
     }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function editCategory($id) {
+        $category = Category::find($id);
+
+        return view('admin.albums.editCategory')->with('category', $category);
+    }
+
+    public function updateCategory(Request $request, $id) {
+        $category = Category::find($id);
+        $category->intro = $request->input('intro');
+        $category->save();
+
+        return redirect('/admin/albums')->with('success', 'Introduction modifiée !');
+    }
 }

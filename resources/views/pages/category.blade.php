@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="section-title">{{ $category->title }}</h2>
-                    <h3 class="section-subtitle">{{ $category->intro }}</h3>
+                    <h3 class="section-subtitle">{!! $category->intro !!}</h3>
                 </div>
             </div>
 

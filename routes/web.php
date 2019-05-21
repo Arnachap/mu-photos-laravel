@@ -35,6 +35,8 @@ Route::get('admin', 'AdminController@dashboard');
     Route::delete('photos/{id}', 'PhotosController@destroy');
     Route::post('sort-photos', 'PhotosController@sort');
     Route::resource('albums', 'AlbumsController')->except('index');
+    Route::get('edit-category/{id}', 'AlbumsController@editCategory');
+    Route::put('update-category/{id}', 'AlbumsController@updateCategory');
     // Admin clients albums routes
     Route::get('/admin/clients', 'AdminController@clients');
     Route::get('photos-clients/{id}', 'PrivatePhotosController@index');

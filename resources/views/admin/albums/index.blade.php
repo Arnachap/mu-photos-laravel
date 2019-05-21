@@ -18,6 +18,15 @@
                 <div class="card card-body">
                     <table class="table table-borderless table-hover">
                         <tbody>
+                            <tr>
+                                <th colspan="2" scope="row">
+                                    <a href="/edit-category/{{ $category->id }}" class="text-primary">
+                                        <i class="far fa-edit"></i>
+                                        Modifier l'introduction
+                                    </a>
+                                </th>
+                            </tr>
+
                             @foreach ($albums as $album)
                                 @if ($album->category == $category->name)
                                     <tr>

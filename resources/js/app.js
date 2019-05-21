@@ -1,5 +1,6 @@
 require('./bootstrap');
 require('./sortable');
+require('./pell');
 const $ = require('jquery');
 
 // Disable right clic on images
