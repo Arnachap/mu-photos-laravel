@@ -2,6 +2,7 @@
 
 @section('content')
     <h1 class="section-title">Albums</h1>
+    
     <button class="button my-3">
         <a href="/albums/create" class="text-white">Créer un album</a>
     </button>

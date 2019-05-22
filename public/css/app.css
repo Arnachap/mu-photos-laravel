@@ -11276,6 +11276,14 @@ header .carousel-indicators li {
   padding-right: 0.5rem;
 }
 
+#testimonials .carousel-control-prev {
+  left: -100px;
+}
+
+#testimonials .carousel-control-next {
+  right: -100px;
+}
+
 .prestation {
   text-align: center;
 }

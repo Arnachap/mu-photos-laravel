@@ -48,6 +48,8 @@ Route::get('admin', 'AdminController@dashboard');
     // Admin slider routes
     Route::resource('slider', 'SliderController')->except(['create', 'show', 'edit']);
     Route::post('sort', 'SliderController@sort');
+    // Admin testimonial route
+    Route::resource('temoignages', 'TestimonialsController')->except(['show']);
 
 // Clients Routes
 Route::get('clients', 'ClientsController@index')->name('clients');

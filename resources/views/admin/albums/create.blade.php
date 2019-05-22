@@ -38,10 +38,6 @@
                         <br>
 
                         {{ Form::file('thumbnail') }}
-
-                        <br>
-
-                        <small class="text-muted">Attention : maximum 2Mo</small>
                     </div>
 
                     {{ Form::submit('Créer l\'album', ['class' => 'button']) }}
