@@ -40,134 +40,25 @@
 
             <div id="testimonialSlider" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row text-center">
-                            <div class="col-md-4">
-                                <div class="testimonial">
-                                    <div class="avatar mx-auto">
-                                        <img src="./img/testimonial/1.jpg" class="img-fluid" alt="">
+                        @foreach($testimonials as $testimonial)
+                        <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                            <div class="row text-center">
+                                <div class="col-12">
+                                    <div class="testimonial">
+                                        <div class="avatar mx-auto">
+                                            <img src="/storage/testimonials/{{ $testimonial->thumbnail }}" class="img-fluid" alt="">
+                                        </div>
+                
+                                        <h4>{{ $testimonial->title }}</h4>
+                
+                                        <p><i class="fas fa-quote-left"></i>
+                                            {{ $testimonial->body }}
+                                        </p>
                                     </div>
-            
-                                    <h4>Morgane & Baptiste</h4>
-            
-                                    <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.</p>
-                                </div>
-                            </div>
-            
-                            <div class="col-md-4">
-                                <div class="testimonial">
-                                    <div class="avatar mx-auto">
-                                        <img src="./img/testimonial/2.jpg" class="img-fluid" alt="">
-                                    </div>
-            
-                                    <h4>Ramona & Michael</h4>
-            
-                                    <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.</p>
-                                </div>
-                            </div>
-            
-                            <div class="col-md-4">
-                                <div class="testimonial">
-                                    <div class="avatar mx-auto">
-                                        <img src="./img/testimonial/3.jpg" class="img-fluid" alt="">
-                                    </div>
-            
-                                    <h4>Audrey & Cédrik</h4>
-            
-                                    <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="row text-center">
-                            <div class="col-md-4">
-                                <div class="testimonial">
-                                    <div class="avatar mx-auto">
-                                        <img src="./img/testimonial/1.jpg" class="img-fluid" alt="">
-                                    </div>
-            
-                                    <h4>Morgane & Baptiste</h4>
-            
-                                    <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.</p>
-                                </div>
-                            </div>
-            
-                            <div class="col-md-4">
-                                <div class="testimonial">
-                                    <div class="avatar mx-auto">
-                                        <img src="./img/testimonial/2.jpg" class="img-fluid" alt="">
-                                    </div>
-            
-                                    <h4>Ramona & Michael</h4>
-            
-                                    <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.</p>
-                                </div>
-                            </div>
-            
-                            <div class="col-md-4">
-                                <div class="testimonial">
-                                    <div class="avatar mx-auto">
-                                        <img src="./img/testimonial/3.jpg" class="img-fluid" alt="">
-                                    </div>
-            
-                                    <h4>Audrey & Cédrik</h4>
-            
-                                    <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="row text-center">
-                            <div class="col-md-4">
-                                <div class="testimonial">
-                                    <div class="avatar mx-auto">
-                                        <img src="./img/testimonial/1.jpg" class="img-fluid" alt="">
-                                    </div>
-            
-                                    <h4>Morgane & Baptiste</h4>
-            
-                                    <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.</p>
-                                </div>
-                            </div>
-            
-                            <div class="col-md-4">
-                                <div class="testimonial">
-                                    <div class="avatar mx-auto">
-                                        <img src="./img/testimonial/2.jpg" class="img-fluid" alt="">
-                                    </div>
-            
-                                    <h4>Ramona & Michael</h4>
-            
-                                    <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.</p>
-                                </div>
-                            </div>
-            
-                            <div class="col-md-4">
-                                <div class="testimonial">
-                                    <div class="avatar mx-auto">
-                                        <img src="./img/testimonial/3.jpg" class="img-fluid" alt="">
-                                    </div>
-            
-                                    <h4>Audrey & Cédrik</h4>
-            
-                                    <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
 
                 <a class="carousel-control-prev" href="#testimonialSlider" role="button" data-slide="prev">

@@ -11254,8 +11254,8 @@ header .carousel-indicators li {
 }
 
 #testimonials .testimonial img {
-  height: 150px;
-  width: 150px;
+  height: 130px;
+  width: 130px;
   border-radius: 50%;
   border: 3px solid white;
 }
@@ -11269,6 +11269,7 @@ header .carousel-indicators li {
 
 #testimonials .testimonial p {
   font-weight: 300;
+  font-size: 18px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 

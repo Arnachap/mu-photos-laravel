@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Slide;
 use App\Album;
 use App\Photo;
+use App\Testimonial;
 
 class PagesController extends Controller
 {
@@ -37,5 +38,11 @@ class PagesController extends Controller
             ->with('photoAmoureux', $photoAmoureux)
             ->with('photoGrossesse', $photoGrossesse)
             ->with('photoSport', $photoSport);
+    }
+
+    public function about() {
+        $testimonials = Testimonial::all();
+
+        return view('pages.about')->with('testimonials', $testimonials);
     }
 }

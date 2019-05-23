@@ -13,7 +13,7 @@
 
 // Public Routes
 Route::get('/', 'PagesController@index');
-Route::view('a-propos', 'pages.about');
+Route::get('/a-propos', 'PagesController@about');
 Route::view('contact', 'pages.contact');
 Route::view('prestations', 'pages.prestations');
 Route::get('galerie/{category}', 'AlbumsController@category');
