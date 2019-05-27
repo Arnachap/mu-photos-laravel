@@ -10699,6 +10699,11 @@ a.text-dark:focus {
   transition: all 0.3s ease-out;
 }
 
+#mainNav .fa-bars {
+  color: white;
+  transition: all 0.3s ease-out;
+}
+
 #mainNav .navbar-brand img {
   transition: all 0.3s ease-out;
 }
@@ -10721,7 +10726,7 @@ a.text-dark:focus {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  padding: 0.75em 0;
+  padding: 1.1em 1em;
   letter-spacing: 1px;
   color: white;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10741,6 +10746,7 @@ a.text-dark:focus {
   border-radius: 3px;
   background: white;
   border: none;
+  transition: all 0.3s ease-out;
 }
 
 #mainNav .navbar-nav .nav-item .dropdown-menu .dropdown-item {
@@ -10756,44 +10762,63 @@ a.text-dark:focus {
   color: #5ec5ca;
 }
 
-@media (min-width: 992px) {
-  #mainNav {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    border: none;
-    background-color: transparent;
+#mainNav.navbar-shrink {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+#mainNav.navbar-shrink .fa-bars {
+  color: #333;
+}
+
+#mainNav.navbar-shrink .navbar-brand #logo-img {
+  height: 40px;
+}
+
+#mainNav.navbar-shrink .navbar-brand #logo-name {
+  height: 28px;
+}
+
+#mainNav.navbar-shrink .nav-link {
+  color: #939090 !important;
+}
+
+#mainNav.navbar-shrink .nav-link:hover,
+#mainNav.navbar-shrink .nav-link.active {
+  color: #5ec5ca !important;
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  #mainNav .navbar-collapse .dropdown-menu {
+    left: 50% !important;
+    -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+    background: transparent !important;
+    padding: 0;
   }
 
-  #mainNav .navbar-brand {
-    font-size: 1.75em;
+  #mainNav .navbar-collapse .dropdown-menu .dropdown-item {
+    text-align: left !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #mainNav .navbar-collapse .dropdown-menu {
+    left: 50% !important;
+    -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+    background: transparent !important;
+    padding: 0;
   }
 
-  #mainNav .navbar-nav .nav-item .nav-link {
-    padding: 1.1em 1em !important;
+  #mainNav .navbar-collapse .dropdown-menu .dropdown-item {
+    text-align: left !important;
   }
 
-  #mainNav.navbar-shrink {
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-  }
-
-  #mainNav.navbar-shrink .navbar-brand #logo-img {
-    height: 40px;
-  }
-
-  #mainNav.navbar-shrink .navbar-brand #logo-name {
-    height: 28px;
-  }
-
-  #mainNav.navbar-shrink .nav-link {
-    color: #939090 !important;
-  }
-
-  #mainNav.navbar-shrink .nav-link:hover,
-  #mainNav.navbar-shrink .nav-link.active {
-    color: #5ec5ca !important;
+  #mainNav .navbar-brand #logo-name {
+    height: 28px !important;
   }
 }
 
@@ -10874,9 +10899,33 @@ footer .social a img {
   height: 30px;
 }
 
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  footer .address p {
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  footer .address .line-one {
+    width: 300px !important;
+  }
+
+  footer .address .line-two {
+    width: 230px !important;
+  }
+
+  footer .address .line-three {
+    width: 160px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer .col-md-4 {
+    margin-top: 20px;
+  }
+}
+
 header .carousel-item {
-  height: 100vh;
-  min-height: 300px;
+  width: 100%;
   background: no-repeat center center scroll;
   background-size: auto;
 }
@@ -10925,14 +10974,72 @@ header .carousel-indicators li {
   font-family: "Kaushan Script", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.portfolio-link:hover img {
+.portfolio-link img {
+  min-height: 100%;
+}
+
+.portfolio-link:hover img,
+.portfolio-link:focus img {
   opacity: 0.2;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.portfolio-link:hover h3 {
+.portfolio-link:hover h3,
+.portfolio-link:focus h3 {
   opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    margin-top: 50px;
+  }
+
+  header .carousel-indicators {
+    display: none;
+  }
+
+  .col-md-4 .portfolio-link,
+  .col-md-6 .portfolio-link {
+    height: 224px !important;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  header {
+    margin-top: 50px;
+  }
+
+  header .carousel-indicators {
+    display: none;
+  }
+
+  .col-md-6 .portfolio-link {
+    height: 224px !important;
+  }
+
+  .col-md-4 .portfolio-link {
+    height: 147px !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    height: 100vh;
+    margin-top: 0;
+  }
+
+  header .carousel-item {
+    height: 100vh;
+  }
+
+  .col-md-6 .portfolio-link {
+    height: 373px !important;
+  }
+
+  .col-md-4 .portfolio-link {
+    height: 247px !important;
+  }
 }
 
 .album-link {
@@ -11219,12 +11326,11 @@ header .carousel-indicators li {
 
 #about {
   padding: 40px 0;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #about img {
-  position: absolute;
-  top: 10%;
+  margin-top: 20px;
   max-height: 80vh;
 }
 
@@ -11246,6 +11352,7 @@ header .carousel-indicators li {
 #testimonials {
   background-color: #5ec5ca;
   color: white;
+  overflow: hidden;
 }
 
 #testimonials h2 {
@@ -11283,6 +11390,36 @@ header .carousel-indicators li {
 
 #testimonials .carousel-control-next {
   right: -100px;
+}
+
+@media screen and (min-width: 769px) {
+  #about img {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  #testimonials .carousel-control-prev {
+    left: -70px;
+  }
+
+  #testimonials .carousel-control-next {
+    right: -70px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #testimonials .testimonial p {
+    text-align: justify;
+  }
+
+  #testimonials .carousel-control-prev {
+    left: -50px;
+  }
+
+  #testimonials .carousel-control-next {
+    right: -50px;
+  }
 }
 
 .prestation {
@@ -11373,6 +11510,22 @@ header .carousel-indicators li {
 #contact .contact-info p span {
   font-weight: bold;
   color: #5ec5ca;
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  #contact .section-subtitle {
+    padding: 0;
+  }
+
+  #contact .contact-info {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact-info {
+    padding: 0 !important;
+  }
 }
 
 #login {
@@ -11501,5 +11654,13 @@ section {
 
 .button:hover {
   background-color: #40b9bf;
+}
+
+@media screen and (max-width: 500px) {
+  .section-subtitle {
+    padding: 0;
+    text-align: justify;
+    font-size: 18px;
+  }
 }
 

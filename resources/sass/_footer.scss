@@ -76,3 +76,30 @@ footer {
         }
     }
 }
+
+@include mediaMd {
+    footer .address {
+        p {
+            font-size: 10px;
+            font-weight: 500;
+        }
+
+        .line-one {
+            width: 300px !important;
+        }
+
+        .line-two {
+            width: 230px !important;
+        }
+
+        .line-three {
+            width: 160px !important;
+        }
+    }
+}
+
+@include mediaSm {
+    footer .col-md-4 {
+        margin-top: 20px;
+    }
+}

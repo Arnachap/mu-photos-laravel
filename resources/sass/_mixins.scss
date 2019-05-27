@@ -1,3 +1,4 @@
+// Font Mixins
 @mixin serif-font {
     font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI',
         Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
@@ -17,6 +18,26 @@
         'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+// Transition Mixin
 @mixin easeOut {
     transition: all 0.3s ease-out;
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (min-width: 501px) and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) {
+        @content;
+    }
 }

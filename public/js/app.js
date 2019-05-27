@@ -39335,11 +39335,19 @@ if (pathname === '/') {
   window.onscroll = function () {
     navbarCollapse();
   };
+
+  if (window.innerWidth < 769) {
+    $(document).ready(function () {
+      $('#mainNav').addClass('navbar-shrink');
+      $('#logo-img').attr('src', './img/logo/logo-img.png');
+      $('#logo-name').attr('src', './img/logo/logo-name.png');
+    });
+  }
 } // Collapse Navbar
 
 
 function navbarCollapse() {
-  if ($('#mainNav').offset().top > 100) {
+  if ($('#mainNav').offset().top > 100 || window.innerWidth < 990) {
     $('#mainNav').addClass('navbar-shrink');
     $('#logo-img').attr('src', './img/logo/logo-img.png');
     $('#logo-name').attr('src', './img/logo/logo-name.png');

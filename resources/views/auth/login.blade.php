@@ -10,7 +10,7 @@
                     </h3>
                 </div>
 
-                <div class="col-6 mx-auto">
+                <div class="col-md-6 mx-auto">
                     <form class="contact-form" method="POST" action="{{ route('login') }}">
                         @csrf
 

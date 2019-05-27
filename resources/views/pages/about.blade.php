@@ -5,9 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="px-5">
-                        <img class="img-fluid" src="./img/about/about.jpg" alt="">
-                    </div>
+                    <img class="img-fluid" src="./img/about/about.jpg" alt="">
                 </div>
 
                 <div class="col-md-6">

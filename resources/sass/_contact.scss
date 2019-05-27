@@ -57,3 +57,21 @@
         }
     }
 }
+
+@include mediaMd {
+    #contact {
+        .section-subtitle {
+            padding: 0;
+        }
+
+        .contact-info {
+            padding: 0;
+        }
+    }
+}
+
+@include mediaSm {
+    .contact-info {
+        padding: 0 !important;
+    }
+}

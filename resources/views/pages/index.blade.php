@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="col-md-6 p-1">
-                    <div class="portfolio-link d-block" style="max-height: 373px; overflow: hidden">
+                    <div class="portfolio-link d-block">
                         <img class="img-fluid" src="/storage/photos/{{ $photoMariage->albumId }}/{{ $photoMariage->photo }}" alt="">
 
                         <a href="/galerie/le-mariage"></a>
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="col-md-6 p-1">
-                    <div class="portfolio-link d-block" style="max-height: 373px; overflow: hidden">
+                    <div class="portfolio-link d-block">
                         <img class="img-fluid" src="/storage/photos/{{ $photoBebe->albumId }}/{{ $photoBebe->photo }}" alt="">
 
                         <a href="/galerie/les-premiers-jours"></a>
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="col-md-4 p-1">
-                    <div class="portfolio-link d-block" style="max-height: 247px; overflow: hidden">
+                    <div class="portfolio-link d-block">
                         <img 
                             class="img-fluid" 
                             src="/storage/photos/{{ $photoAmoureux->albumId }}/{{ $photoAmoureux->photo }}" 
@@ -66,7 +66,7 @@
                 </div>
 
                 <div class="col-md-4 p-1">
-                    <div class="portfolio-link d-block" style="max-height: 247px; overflow: hidden">
+                    <div class="portfolio-link d-block">
                         <img
                             class="img-fluid"
                             src="/storage/photos/{{ $photoGrossesse->albumId }}/{{ $photoGrossesse->photo }}"
@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="col-md-4 p-1">
-                    <div class="portfolio-link d-block" style="max-height: 247px; overflow: hidden">
+                    <div class="portfolio-link d-block">
                         <img
                             class="img-fluid"
                             src="/storage/photos/{{ $photoSport->albumId }}/{{ $photoSport->photo }}"

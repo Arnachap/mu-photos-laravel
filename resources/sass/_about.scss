@@ -1,10 +1,9 @@
 #about {
     padding: 40px 0;
-    height: 100vh;
+    min-height: 100vh;
 
     img {
-        position: absolute;
-        top: 10%;
+        margin-top: 20px;
         max-height: 80vh;
     }
 
@@ -27,6 +26,7 @@
 #testimonials {
     background-color: $primary;
     color: white;
+    overflow: hidden;
 
     h2 {
         color: white;
@@ -65,5 +65,40 @@
 
     .carousel-control-next {
         right: -100px;
+    }
+}
+
+@include mediaLg {
+    #about {
+        img {
+            margin-left: 50px;
+        }
+    }
+}
+
+@include mediaMd {
+    #testimonials {
+        .carousel-control-prev {
+            left: -70px;
+        }
+
+        .carousel-control-next {
+            right: -70px;
+        }
+    }
+}
+
+@include mediaSm {
+    #testimonials {
+        .testimonial p {
+            text-align: justify;
+        }
+        .carousel-control-prev {
+            left: -50px;
+        }
+
+        .carousel-control-next {
+            right: -50px;
+        }
     }
 }

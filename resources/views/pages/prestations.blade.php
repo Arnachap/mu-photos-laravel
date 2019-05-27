@@ -19,6 +19,8 @@
                         <p>Des souvenirs de<br>ces premiers jours avec vous.</p>
 
                         <p>Pensez-y aussi<br>pour les faire parts.</p>
+                        
+                        <p class="price">150 €</p>
                     </div>
                 </div>
 
@@ -36,6 +38,10 @@
                         <p>Des formules modulables<br>pour répondre à vos envies.</p>
 
                         <p>Pensez-y aussi<br>pour les faire parts.</p>
+
+                        <p class="price">
+                            <a href="/pdf/tarifs-mariage-2019.pdf" target="_blank">Découvrez<br>nos formules</a>
+                        </p>
                     </div>
                 </div>
 
@@ -52,6 +58,8 @@
                         <p>Un moment privilégié pour exprimer sa féminité.</p>
 
                         <p>De quoi ravir votre coeur<br>et celui de votre moitié.</p>
+
+                        <p class="price">120 €</p>
                     </div>
                 </div>
 
@@ -66,6 +74,8 @@
                         <p>Un moment tout en douceur,<br>pour sublimer votre corps de future Maman.</p>
 
                         <p>Et garder à jamais des souvenirs de ce moment si particulier.</p>
+
+                        <p class="price">100 €</p>
                     </div>
                 </div>
 
@@ -81,31 +91,26 @@
                             tribu.</p>
 
                         <p>A offrir ou à s'offrir.</p>
+
+                        <p class="price">100 €</p>
                     </div>
                 </div>
             </div>
 
             <div class="row mt-3">
                 <div class="col prestation">
-                    <p class="price">150 €</p>
                 </div>
 
                 <div class="col prestation">
-                    <p class="price">
-                        <a href="/pdf/tarifs-mariage-2019.pdf" target="_blank">Découvrez<br>nos formules</a>
-                    </p>
                 </div>
 
                 <div class="col prestation">
-                    <p class="price">120 €</p>
                 </div>
 
                 <div class="col prestation">
-                    <p class="price">100 €</p>
                 </div>
 
                 <div class="col prestation">
-                    <p class="price">100 €</p>
                 </div>
             </div>
         </div>

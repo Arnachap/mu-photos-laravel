@@ -82,3 +82,11 @@ section {
         background-color: $primary-dark;
     }
 }
+
+@include mediaSm {
+    .section-subtitle {
+        padding: 0;
+        text-align: justify;
+        font-size: 18px;
+    }
+}

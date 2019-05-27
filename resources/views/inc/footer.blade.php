@@ -1,12 +1,12 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-4 logo">
+            <div class="col-md-4 logo">
                 <img class="img-fluid" src="/img/logo/logo-img-white.png" alt="">
                 <img src="/img/logo/logo-name-white.png" alt="">
             </div>
 
-            <div class="col-4 social">
+            <div class="col-md-4 social">
                 <a href="https://www.facebook.com/MuphotosNancy/" target="_blank">
                     <i class="fab fa-facebook-square"></i>
                 </a>
@@ -20,7 +20,7 @@
                 </a>
             </div>
 
-            <div class="col-4 address">
+            <div class="col-md-4 address">
                 <p>66 boulevard d’Haussonville - 54000 NANCY</p>
                 <div class="line-one"></div>
                 <div class="line-two"></div>

@@ -1,7 +1,6 @@
 header {
     .carousel-item {
-        height: 100vh;
-        min-height: 300px;
+        width: 100%;
         background: no-repeat center center scroll;
         background-size: auto;
     }
@@ -49,7 +48,12 @@ header {
         }
     }
 
-    &:hover {
+    img {
+        min-height: 100%;
+    }
+
+    &:hover,
+    &:focus {
         img {
             opacity: 0.2;
             transform: scale(1.2);
@@ -57,6 +61,69 @@ header {
 
         h3 {
             opacity: 1;
+        }
+    }
+}
+
+// Media Queries
+@include mediaSm {
+    header {
+        margin-top: 50px;
+
+        .carousel-indicators {
+            display: none;
+        }
+    }
+
+    .col-md-4,
+    .col-md-6 {
+        .portfolio-link {
+            height: 224px !important;
+        }
+    }
+}
+
+@include mediaMd {
+    header {
+        margin-top: 50px;
+
+        .carousel-indicators {
+            display: none;
+        }
+    }
+
+    .col-md-6 {
+        .portfolio-link {
+            height: 224px !important;
+        }
+    }
+
+    .col-md-4 {
+        .portfolio-link {
+            height: 147px !important;
+        }
+    }
+}
+
+@include mediaLg {
+    header {
+        height: 100vh;
+        margin-top: 0;
+
+        .carousel-item {
+            height: 100vh;
+        }
+    }
+
+    .col-md-6 {
+        .portfolio-link {
+            height: 373px !important;
+        }
+    }
+
+    .col-md-4 {
+        .portfolio-link {
+            height: 247px !important;
         }
     }
 }
