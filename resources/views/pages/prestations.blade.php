@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Préstations
+@endsection
+
 @section('content')
     <section>
         <div class="container-fluid">
@@ -9,7 +13,7 @@
                 <div class="col">
                     <div class="prestation">
                         <a href="/galerie/les-premiers-jours">
-                            <img src="/img/prestations/1.jpg" alt="">
+                            <img src="/img/prestations/1.jpg" alt="Mu' Photo, photographe naissance Nancy">
 
                             <h3>Bout de chou</h3>
                         </a>
@@ -27,7 +31,7 @@
                 <div class="col">
                     <div class="prestation">
                         <a href="/galerie/le-mariage">
-                            <img src="/img/prestations/2.jpg" alt="">
+                            <img src="/img/prestations/2.jpg" alt="Mu' Photo, photographe mariage Nancy">
 
                             <h3>Signature</h3>
                         </a>
@@ -48,7 +52,7 @@
                 <div class="col">
                     <div class="prestation">
                         <a href="/galerie/boudoir">
-                            <img src="/img/prestations/3.jpg" alt="">
+                            <img src="/img/prestations/3.jpg" alt="Mu' Photo, photographe boudoir Nancy">
 
                             <h3>Boudoir</h3>
                         </a>
@@ -66,7 +70,7 @@
                 <div class="col">
                     <div class="prestation">
                         <a href="/galerie/en-attendant-bebe">
-                            <img src="/img/prestations/4.jpg" alt="">
+                            <img src="/img/prestations/4.jpg" alt="Mu' Photo, photographe grossesse Nancy">
 
                             <h3>Grossesse</h3>
                         </a>
@@ -82,7 +86,7 @@
                 <div class="col">
                     <div class="prestation">
                         <a href="/galerie/le-bonheur-en-famille">
-                            <img src="/img/prestations/5.jpg" alt="">
+                            <img src="/img/prestations/5.jpg" alt="Mu' Photo, photographe famille Nancy">
 
                             <h3>Famille</h3>
                         </a>

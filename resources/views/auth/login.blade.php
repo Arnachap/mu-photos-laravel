@@ -1,16 +1,19 @@
 @extends('layouts.app')
 
+@section('title')
+    Connexion
+@endsection
+
 @section('content')
     <section id="login">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h2 class="section-title">Connexion</h2>
-                    <h3 class="section-subtitle">Veuillez vous connecter afin d'accéder à votre galerie personnelle.
-                    </h3>
+                    <h3 class="section-subtitle">Veuillez vous connecter afin d'accéder à votre galerie personnelle.</h3>
                 </div>
 
-                <div class="col-md-6 mx-auto">
+                <div class="col-6 mx-auto">
                     <form class="contact-form" method="POST" action="{{ route('login') }}">
                         @csrf
 

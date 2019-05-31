@@ -7,7 +7,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Mu\' Photos') }} - @yield('title')</title>
+    <meta name="description" content="Mu' Photos, photographe à Nancy (54). Muriel Barbier photographie avec tendresse et naturel les amoureux, les futures Mamans, les bébés ainsi que vos mariages.">
+    <meta name="keywords" content="Photographe, Nancy, Mariage">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

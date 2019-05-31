@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg fixed-top {{ Request::is('/') ? '' : 'navbar-shrink' }}" id="mainNav">
     <div class="container">
         <a class="navbar-brand" href="/">
-            <img id="logo-img" src="/img/logo/logo-img{{ Request::is('/') ? '-white' : '' }}.png" alt="">
-            <img id="logo-name" src="/img/logo/logo-name{{ Request::is('/') ? '-white' : '' }}.png" alt="">
+            <img id="logo-img" src="/img/logo/logo-img{{ Request::is('/') ? '-white' : '' }}.png" alt="Logo Mu' Photos Photographe Nancy">
+            <img id="logo-name" src="/img/logo/logo-name{{ Request::is('/') ? '-white' : '' }}.png" alt="Logo Mu' Photos Photographe Nancy">
         </a>
 
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"

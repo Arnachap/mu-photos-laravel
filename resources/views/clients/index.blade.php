@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    {{ $album->title }}
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row">
@@ -23,7 +27,7 @@
                         <img 
                             src="/storage/private-photos/{{ $album->id }}/{{ $photo->photo }}"
                             data-full="/storage/private-photos/{{ $album->id }}/{{ $photo->photo }}"
-                            alt="{{ $photo->photo }}" 
+                            alt="Photo {{ $album->title }} {{ $photo->photo }} Nancy" 
                             class="m-p-g__thumbs-img">
                     @endforeach
                 </div>

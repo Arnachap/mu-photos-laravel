@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Créatrice de souvenirs - Photographe professionnelle à Nancy
+@endsection
+
 @section('content')
     <header>
         <div id="headerSlider" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="3000">
@@ -12,7 +16,7 @@
             <div class="carousel-inner">
                 @foreach($slides as $slide)
                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                        <img src="/storage/slides/{{ $slide->filename }}" class="d-block w-100" alt="/img/slider1.jpg">
+                        <img src="/storage/slides/{{ $slide->filename }}" class="d-block w-100" alt="Photo Nancy accueil {{ $slide->filename }}">
                     </div>
                 @endforeach
             </div>
@@ -28,7 +32,7 @@
 
                 <div class="col-md-6 p-1">
                     <div class="portfolio-link d-block">
-                        <img class="img-fluid" src="/storage/photos/{{ $photoMariage->albumId }}/{{ $photoMariage->photo }}" alt="">
+                        <img class="img-fluid" src="/storage/photos/{{ $photoMariage->albumId }}/{{ $photoMariage->photo }}" alt="Mu' Photo, photographe mariage Nancy">
 
                         <a href="/galerie/le-mariage"></a>
 
@@ -40,7 +44,7 @@
 
                 <div class="col-md-6 p-1">
                     <div class="portfolio-link d-block">
-                        <img class="img-fluid" src="/storage/photos/{{ $photoBebe->albumId }}/{{ $photoBebe->photo }}" alt="">
+                        <img class="img-fluid" src="/storage/photos/{{ $photoBebe->albumId }}/{{ $photoBebe->photo }}" alt="Mu' Photo, photographe naissance Nancy">
 
                         <a href="/galerie/les-premiers-jours"></a>
 
@@ -55,7 +59,7 @@
                         <img 
                             class="img-fluid" 
                             src="/storage/photos/{{ $photoAmoureux->albumId }}/{{ $photoAmoureux->photo }}" 
-                            alt="">
+                            alt="Mu' Photo, photographe couples Nancy">
 
                         <a href="/galerie/en-amoureux"></a>
 
@@ -70,7 +74,7 @@
                         <img
                             class="img-fluid"
                             src="/storage/photos/{{ $photoGrossesse->albumId }}/{{ $photoGrossesse->photo }}"
-                            alt="">
+                            alt="Mu' Photo, photographe grossesse Nancy">
 
                         <a href="/galerie/en-attendant-bebe"></a>
 
@@ -85,7 +89,7 @@
                         <img
                             class="img-fluid"
                             src="/storage/photos/{{ $photoSport->albumId }}/{{ $photoSport->photo }}"
-                            alt="">
+                            alt="Mu' Photo, photographe sport Nancy">
 
                         <a href="/galerie/sport"></a>
 

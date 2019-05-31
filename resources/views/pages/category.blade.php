@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Albums {{ $category->title }}
+@endsection
+
 @section('content')
     <section>
         <div class="container">
@@ -14,7 +18,7 @@
                 @foreach($albums as $album)
                     <div class="col-md-6 col-lg-4 p-1">
                         <div class="album-link">
-                            <img class="img-fluid" src="/storage/thumbnails/{{ $album->thumbnail }}" alt="">
+                            <img class="img-fluid" src="/storage/thumbnails/{{ $album->thumbnail }}" alt="Album Photo {{ $album->title }} {{ $category->title }} Mu' Photos Nancy">
 
                             <a href="/albums/{{ $album->id }}"></a>
 

@@ -21,7 +21,7 @@
         <div class="row" id="sortable">
             @foreach($photos as $photo)
                 <div class="col-3 mb-3">
-                    <img src="/storage/photos/{{ $album->id }}/{{ $photo->photo }}" alt="" class="img-fluid">
+                    <img src="/storage/photos/{{ $album->id }}/{{ $photo->photo }}" alt="Photo {{ $album->title }} {{ $album->category }} {{ $photo->photo }} Nancy" class="img-fluid">
 
                     <button type="button" class="btn btn-sm btn-danger" style="position: absolute; top: 5px; right: 20px;font-size: 10px; font-weight: bold" data-toggle="modal" data-target="#modal{{$photo->id}}">X</button>
 

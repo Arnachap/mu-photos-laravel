@@ -1,11 +1,15 @@
 @extends('layouts.app')
 
+@section('title')
+    A propos
+@endsection
+
 @section('content')
     <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img class="img-fluid" src="./img/about/about.jpg" alt="">
+                    <img class="img-fluid" src="/img/about/about.jpg" alt="Mu' Photos Photographe Nancy">
                 </div>
 
                 <div class="col-md-6">
@@ -44,7 +48,7 @@
                                 <div class="col-12">
                                     <div class="testimonial">
                                         <div class="avatar mx-auto">
-                                            <img src="/storage/testimonials/{{ $testimonial->thumbnail }}" class="img-fluid" alt="">
+                                            <img src="/storage/testimonials/{{ $testimonial->thumbnail }}" class="img-fluid" alt="Témoignage Mu' Photos Nancy {{ $testimonial->title }}">
                                         </div>
                 
                                         <h4>{{ $testimonial->title }}</h4>

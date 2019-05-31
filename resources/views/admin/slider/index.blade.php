@@ -20,7 +20,7 @@
 
             @foreach($slides as $slide)
                 <div class="col-3">
-                    <img src="/storage/slides/{{ $slide->filename }}" alt="" class="img-fluid">
+                    <img src="/storage/slides/{{ $slide->filename }}" alt="Photo accueil {{ $slide->filename }} photographe Nancy" class="img-fluid">
 
                     <button type="button" class="btn btn-sm btn-danger" style="position: absolute; top: 5px; right: 20px;font-size: 10px; font-weight: bold" data-toggle="modal" data-target="#modal{{$slide->id}}">X</button>
                     

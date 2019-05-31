@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 logo">
-                <img class="img-fluid" src="/img/logo/logo-img-white.png" alt="">
-                <img src="/img/logo/logo-name-white.png" alt="">
+                <img class="img-fluid" src="/img/logo/logo-img-white.png" alt="Logo Mu' Photos Photographe Nancy">
+                <img src="/img/logo/logo-name-white.png" alt="Logo Mu' Photos Photographe Nancy">
             </div>
 
             <div class="col-md-4 social">
@@ -16,7 +16,7 @@
                 </a>
 
                 <a href="https://www.mariages.net/photo-mariage/mu-photos--e144717" target="_blank">
-                    <img class="img-fluid" src="/img/logo/mariagenet.png" alt="">
+                    <img class="img-fluid" src="/img/logo/mariagenet.png" alt="Mariage.net Mu' Photos Photographe Nancy">
                 </a>
             </div>
 
