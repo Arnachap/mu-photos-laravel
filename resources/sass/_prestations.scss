@@ -1,5 +1,6 @@
 .prestation {
     text-align: center;
+    padding: 0 15px;
 
     img {
         height: 150px;
@@ -16,6 +17,8 @@
     }
 
     p {
+        font-size: 14px;
+        font-weight: 300;
         @include body-font;
 
         a {
