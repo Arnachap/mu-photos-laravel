@@ -6,7 +6,7 @@
 
 @section('content')
     <header>
-        <div id="headerSlider" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="3000">
+        <div id="headerSlider" class="carousel slide carousel-fade lazy" data-ride="carousel" data-pause="false" data-interval="3000">
             <ol class="carousel-indicators">
                 @foreach($slides as $index => $slide)
                     <li data-target="#headerSlider" data-slide-to="{{ $index }}" {{ $loop->first ? ' class=active' : '' }}></li>
@@ -16,7 +16,7 @@
             <div class="carousel-inner">
                 @foreach($slides as $slide)
                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                        <img src="/storage/slides/{{ $slide->filename }}" class="d-block w-100" alt="Photo Nancy accueil {{ $slide->filename }}">
+                        <img {{ $loop->first ? '' : 'data-' }}src="/storage/slides/{{ $slide->filename }}" class="d-block w-100" alt="Photo Nancy accueil {{ $slide->filename }}">
                     </div>
                 @endforeach
             </div>

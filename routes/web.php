@@ -14,9 +14,12 @@
 // Public Routes
 Route::get('/', 'PagesController@index');
 Route::get('/a-propos', 'PagesController@about');
-Route::view('contact', 'pages.contact');
 Route::view('prestations', 'pages.prestations');
 Route::get('galerie/{category}', 'AlbumsController@category');
+
+// Contact form
+Route::get('contact', 'ContactFormController@create');
+Route::post('contact', 'ContactFormController@store');
 
 // Authentication Routes
 Route::get('connexion', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginForm']);

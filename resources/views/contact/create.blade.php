@@ -13,13 +13,17 @@
                 </div>
 
                 <div class="col-md-6">
-                    <form class="contact-form">
-                        <input type="text" placeholder="VOTRE NOM">
-                        <input type="email" placeholder="VOTRE E-MAIL">
-                        <input type="text" placeholder="SUJET">
-                        <textarea placeholder="MESSAGE"></textarea>
-                        <button type="submit" class="button">Envoyer</button>
-                    </form>
+                    {{ Form::open(['action' => 'ContactFormController@store', 'method' => 'POST', 'class' => 'contact-form']) }}
+                        {{ Form::text('name', '', ['placeholder' => 'Votre nom']) }}
+
+                        {{ Form::email('email', '', ['placeholder' => 'Votre e-mail']) }}
+
+                        {{ Form::text('subject', '', ['placeholder' => 'Sujet']) }}
+
+                        {{ Form::textarea('message', '', ['placeholder' => 'Message']) }}
+
+                        {{ Form::button('Envoyer', ['class' => 'button', 'type' => 'submit']) }}
+                    {{ Form::close() }}
                 </div>
 
                 <div class="col-md-6">

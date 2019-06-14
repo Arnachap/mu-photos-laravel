@@ -6,7 +6,7 @@
 
 @section('content')
     <section id="about">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
                     <img class="img-fluid" src="/img/about/about.jpg" alt="Mu' Photos Photographe Nancy">

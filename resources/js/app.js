@@ -35,3 +35,11 @@ function navbarCollapse() {
         $('#logo-name').attr('src', './img/logo/logo-name-white.png');
     }
 }
+
+// Caroussel lazy loading
+$('.carousel.lazy').on('slide.bs.carousel', function(ev) {
+    var lazy;
+    lazy = $(ev.relatedTarget).find('img[data-src]');
+    lazy.attr('src', lazy.data('src'));
+    lazy.removeAttr('data-src');
+});
