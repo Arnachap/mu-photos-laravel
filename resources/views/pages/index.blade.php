@@ -32,7 +32,7 @@
 
                 <div class="col-md-6 p-1">
                     <div class="portfolio-link d-block">
-                        <img class="img-fluid" src="/storage/photos/{{ $photoMariage->albumId }}/{{ $photoMariage->photo }}" alt="Mu' Photo, photographe mariage Nancy">
+                        <img class="img-fluid" src="/storage/photos/{{ $photoMariage->albumId }}/thumb_{{ $photoMariage->photo }}" alt="Mu' Photo, photographe mariage Nancy">
 
                         <a href="/galerie/le-mariage"></a>
 
@@ -44,7 +44,7 @@
 
                 <div class="col-md-6 p-1">
                     <div class="portfolio-link d-block">
-                        <img class="img-fluid" src="/storage/photos/{{ $photoBebe->albumId }}/{{ $photoBebe->photo }}" alt="Mu' Photo, photographe naissance Nancy">
+                        <img class="img-fluid" src="/storage/photos/{{ $photoBebe->albumId }}/thumb_{{ $photoBebe->photo }}" alt="Mu' Photo, photographe naissance Nancy">
 
                         <a href="/galerie/les-premiers-jours"></a>
 
@@ -58,7 +58,7 @@
                     <div class="portfolio-link d-block">
                         <img 
                             class="img-fluid" 
-                            src="/storage/photos/{{ $photoAmoureux->albumId }}/{{ $photoAmoureux->photo }}" 
+                            src="/storage/photos/{{ $photoAmoureux->albumId }}/thumb_{{ $photoAmoureux->photo }}" 
                             alt="Mu' Photo, photographe couples Nancy">
 
                         <a href="/galerie/en-amoureux"></a>
@@ -73,7 +73,7 @@
                     <div class="portfolio-link d-block">
                         <img
                             class="img-fluid"
-                            src="/storage/photos/{{ $photoGrossesse->albumId }}/{{ $photoGrossesse->photo }}"
+                            src="/storage/photos/{{ $photoGrossesse->albumId }}/thumb_{{ $photoGrossesse->photo }}"
                             alt="Mu' Photo, photographe grossesse Nancy">
 
                         <a href="/galerie/en-attendant-bebe"></a>
@@ -88,7 +88,7 @@
                     <div class="portfolio-link d-block">
                         <img
                             class="img-fluid"
-                            src="/storage/photos/{{ $photoSport->albumId }}/{{ $photoSport->photo }}"
+                            src="/storage/photos/{{ $photoSport->albumId }}/thumb_{{ $photoSport->photo }}"
                             alt="Mu' Photo, photographe sport Nancy">
 
                         <a href="/galerie/sport"></a>

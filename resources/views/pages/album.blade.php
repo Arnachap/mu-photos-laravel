@@ -19,7 +19,7 @@
                     <div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
                         @foreach ($photos as $photo)
                             <img 
-                                src="/storage/photos/{{ $album->id }}/{{ $photo->photo }}"
+                                src="/storage/photos/{{ $album->id }}/thumb_{{ $photo->photo }}"
                                 data-full="/storage/photos/{{ $album->id }}/{{ $photo->photo }}"
                                 alt="Photo {{ $photo->photo }} {{ $album->title }} Nancy" 
                                 class="m-p-g__thumbs-img">

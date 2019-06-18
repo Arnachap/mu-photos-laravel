@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManagerStatic as Image;
 use App\Album;
 use App\Category;
 use App\Photo;
@@ -77,8 +78,14 @@ class AlbumsController extends Controller
         $extension = $request->file('thumbnail')->getClientOriginalExtension();
         // Filename to store
         $filenameToStore = $filename . '_' . time() . '.' . $extension;
-        // Upload image
-        $path = $request->file('thumbnail')->storeAs('public/thumbnails', $filenameToStore);
+        // Resize & save thumbnail
+        $thumb = Image::make($request->file('thumbnail'));
+
+        $thumb->resize(null, 1000, function ($constraint) {
+            $constraint->aspectRatio();
+        });
+
+        $thumb->save('storage/thumbnails/' . $filenameToStore);
 
         $album = new Album;
         $album->title = $request->input('title');
@@ -144,15 +151,21 @@ class AlbumsController extends Controller
             $extension = $request->file('thumbnail')->getClientOriginalExtension();
             // Filename to store
             $filenameToStore = $filename . '_' . time() . '.' . $extension;
-            // Upload image
-            $path = $request->file('thumbnail')->storeAs('public/thumbnails', $filenameToStore);
+            // Resize & save thumbnail
+            $thumb = Image::make($request->file('thumbnail'));
+
+            $thumb->resize(null, 1000, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+
+            $thumb->save('storage/thumbnails/' . $filenameToStore);
         }
 
         $album = Album::find($id);
         if($request->hasFile('thumbnail')) {
             // Delete old image
             Storage::delete('public/thumbnails/' . $album->thumbnail);
-            // Save new file
+            // Save new filename
             $album->thumbnail = $filenameToStore;
         }
         $album->title = $request->input('title');
@@ -179,6 +192,7 @@ class AlbumsController extends Controller
         // Delete Photos from DB & storage
         foreach ($photos as $photo) {
             Storage::delete('public/photos/' . $album->id . '/' . $photo->photo);
+            Storage::delete('public/photos/' . $album->id . '/thumb_' . $photo->photo);
             $photo->delete();
         }
 
