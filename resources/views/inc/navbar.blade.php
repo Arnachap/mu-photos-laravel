@@ -42,7 +42,7 @@
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item {{ Request::is('prestations') ? 'active' : '' }}" href="/prestations">Préstations</a>
+                        <a class="dropdown-item {{ Request::is('prestations') ? 'active' : '' }}" href="/prestations">Prestations</a>
 
                         <a class="dropdown-item {{ Request::is('contact') ? 'active' : '' }}" href="/contact">Contact</a>
                     </div>

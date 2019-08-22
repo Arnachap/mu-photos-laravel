@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Préstations
+    Prestations
 @endsection
 
 @section('content')
