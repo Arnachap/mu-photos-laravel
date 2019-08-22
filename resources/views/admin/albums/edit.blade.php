@@ -16,7 +16,8 @@
                     <div class="form-group">
                         {{ Form::label('intro', 'Introduction :') }}
 
-                        {{ Form::textarea('intro', $album->intro, ['class' => 'form-control', 'placeholder' => 'Introduction', 'rows' => '3']) }}
+                        <div id="editor"></div>
+                        {{ Form::hidden('intro', $album->intro, ['id' => 'intro', 'placeholder' => 'Introduction', 'class' => 'form-control', 'rows' => '5']) }}
                     </div>
 
                     <div class="form-group">
