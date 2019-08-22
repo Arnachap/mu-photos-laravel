@@ -40,6 +40,8 @@ Route::get('admin', 'AdminController@dashboard');
     Route::resource('albums', 'AlbumsController')->except('index');
     Route::get('edit-category/{id}', 'AlbumsController@editCategory');
     Route::put('update-category/{id}', 'AlbumsController@updateCategory');
+    Route::get('/edit-albums-order/{id}', 'AlbumsController@editAlbumsOrder');
+    Route::post('/save-albums-order', 'AlbumsController@saveAlbumsOrder');
     // Admin clients albums routes
     Route::get('/admin/clients', 'AdminController@clients');
     Route::get('photos-clients/{id}', 'PrivatePhotosController@index');

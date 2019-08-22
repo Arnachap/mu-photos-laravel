@@ -37,7 +37,7 @@ class AlbumsController extends Controller
             $albums = Album::where([
                 ['category', $category->name],
                 ['public', true]
-            ])->get();
+            ])->orderBy('position')->get();
 
             return view('pages.category')
                 ->with('albums', $albums)
@@ -223,5 +223,25 @@ class AlbumsController extends Controller
         $category->save();
 
         return redirect('/admin/albums')->with('success', 'Introduction modifiée !');
+    }
+
+    public function editAlbumsOrder($id) {
+        $category = Category::find($id);
+        $albums = Album::where('category', $category->name)->orderBy('position')->get();
+
+        return view('admin.albums.editAlbumsOrder')->with([
+            'albums' => $albums,
+            'category' => $category    
+        ]);
+    }
+
+    public function saveAlbumsOrder(Request $request) {
+        foreach ($request->id as $index => $id) {
+            $album = Album::find($id);
+            $album->position = $index;
+            $album->save();
+        }
+
+        return redirect('/admin/albums')->with('success', 'Ordre des albums sauvegardé !');
     }
 }

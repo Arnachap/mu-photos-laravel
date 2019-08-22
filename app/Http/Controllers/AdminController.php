@@ -26,11 +26,13 @@ class AdminController extends Controller
 
     public function albums() {
         $categories = Category::all();
-        $albums = Album::all();
+
+        foreach ($categories as $category) {
+            $category->albums = Album::where('category', $category->name)->orderBy('position')->get();
+        }
 
         return view('admin.albums.index')
-            ->with('categories', $categories)
-            ->with('albums', $albums);
+            ->with('categories', $categories);
     }
 
     public function clients() {
