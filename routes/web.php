@@ -14,7 +14,7 @@
 // Public Routes
 Route::get('/', 'PagesController@index');
 Route::get('/a-propos', 'PagesController@about');
-Route::view('prestations', 'pages.prestations');
+Route::get('prestations', 'PrestationsController@show');
 Route::get('galerie/{category}', 'AlbumsController@category');
 
 // Contact form
@@ -55,6 +55,10 @@ Route::get('admin', 'AdminController@dashboard');
     Route::post('sort', 'SliderController@sort');
     // Admin testimonial route
     Route::resource('temoignages', 'TestimonialsController')->except(['show']);
+    // Admin prestations routes
+    Route::get('/admin/prestations', 'PrestationsController@index');
+    Route::get('/prestations/{id}/edit', 'PrestationsController@edit');
+    Route::put('/prestation/{id}/update', 'PrestationsController@update');
 
 // Clients Routes
 Route::get('clients', 'ClientsController@index')->name('clients');

@@ -26,6 +26,10 @@
             </li>
 
             <li class="nav-item">
+                <a href="/admin/prestations" class="nav-link">Prestations</a>
+            </li>
+
+            <li class="nav-item">
                 <a href="/" class="nav-link">Retour au site</a>
             </li>
         </ul>

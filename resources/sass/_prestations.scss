@@ -16,7 +16,7 @@
         @include script-font;
     }
 
-    p {
+    .description {
         font-size: 14px;
         font-weight: 300;
         @include body-font;
@@ -24,11 +24,16 @@
         a {
             color: $primary;
         }
+    }
 
-        &.price {
-            font-size: 20px;
+    .price {
+        font-size: 20px;
+        margin-top: 20px;
+        color: $primary;
+        @include serif-font;
+
+        a {
             color: $primary;
-            @include serif-font;
         }
     }
 }
