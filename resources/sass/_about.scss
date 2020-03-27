@@ -1,25 +1,34 @@
 #about {
-    padding: 40px 100px;
-    min-height: 100vh;
+    padding: 57px 0 0;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 
     img {
-        margin-top: 20px;
-        max-height: 80vh;
+        width: 50%;
+        height: auto;
+        margin: 0;
     }
 
-    h3 {
-        margin-bottom: 40px;
-        text-align: center;
-        font-size: 20px;
-        line-height: 1.4;
-        @include heading-font;
-    }
+    .about-text {
+        width: 50%;
+        float: right;
+        padding: 20px 60px;
 
-    p {
-        text-align: justify;
-        text-indent: 2em;
-        font-weight: 300;
-        @include body-font;
+        h3 {
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 20px;
+            line-height: 1.4;
+            @include heading-font;
+        }
+
+        p {
+            text-align: center;
+            text-indent: 2em;
+            font-weight: 300;
+            @include body-font;
+        }
     }
 }
 
@@ -69,11 +78,6 @@
 }
 
 @include mediaLg {
-    #about {
-        img {
-            margin-left: 50px;
-        }
-    }
 }
 
 @include mediaMd {
