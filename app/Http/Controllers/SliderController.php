@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManagerStatic as Image;
 use App\Slide;
 
 class SliderController extends Controller
@@ -41,7 +42,13 @@ class SliderController extends Controller
         if ($request->hasFile('slide')) {
             $filename = $request->file('slide')->getClientOriginalName();
 
-            $path = $request->file('slide')->storeAs('public/slides/', $filename);
+            $file = Image::make($request->file('slide'));
+    
+            $file->resize(null, 1080, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+
+            $file->save('storage/slides/' . $filename);
 
             $slide = new Slide;
             $slide->filename = $filename;
