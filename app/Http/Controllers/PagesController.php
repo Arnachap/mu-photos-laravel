@@ -23,7 +23,10 @@ class PagesController extends Controller
 
     public function about() {
         $about = About::first();
+        $testimonials = Testimonial::all();
 
-        return view('pages.about')->with('about', $about);
+        return view('pages.about')
+        ->with('about', $about)
+        ->with('testimonials', $testimonials);
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManagerStatic as Image;
 use App\Prestation;
+use App\Testimonial;
 
 class PrestationsController extends Controller
 {
@@ -24,8 +25,11 @@ class PrestationsController extends Controller
      */
     public function show() {
         $prestations = Prestation::all();
+        $testimonials = Testimonial::all();
 
-        return view('pages.prestations')->with('prestations', $prestations);
+        return view('pages.prestations')
+            ->with('prestations', $prestations)
+            ->with('testimonials', $testimonials);
     }
 
     /**
