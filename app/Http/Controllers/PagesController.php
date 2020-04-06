@@ -7,6 +7,7 @@ use App\Slide;
 use App\Album;
 use App\Photo;
 use App\Testimonial;
+use App\About;
 
 class PagesController extends Controller
 {
@@ -21,6 +22,8 @@ class PagesController extends Controller
     }
 
     public function about() {
-        return view('pages.about');
+        $about = About::first();
+
+        return view('pages.about')->with('about', $about);
     }
 }

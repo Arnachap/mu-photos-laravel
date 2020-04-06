@@ -59,6 +59,9 @@ Route::get('admin', 'AdminController@dashboard');
     Route::get('/admin/prestations', 'PrestationsController@index');
     Route::get('/prestations/{id}/edit', 'PrestationsController@edit');
     Route::put('/prestation/{id}/update', 'PrestationsController@update');
+    // About
+    Route::get('/about', 'AboutController@edit');
+    Route::put('/about', 'AboutController@update');
 
 // Clients Routes
 Route::get('clients', 'ClientsController@index')->name('clients');
